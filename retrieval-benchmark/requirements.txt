@@ -1,0 +1,5 @@
+# One interpreter runs BOTH stages (run-graphify.py and score.py). Verified 2026-08-18.
+#   python3 -m venv .venv-bench && .venv-bench/bin/pip install -r requirements.txt
+graphifyy @ git+https://github.com/Graphify-Labs/graphify@v0.9.28
+networkx==3.6.1
+tiktoken==0.12.0

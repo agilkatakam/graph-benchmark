@@ -1,0 +1,190 @@
+{
+  "repo": "pandas",
+  "referee": "CPython ast",
+  "graphify_baseline": true,
+  "truth_counts": {
+    "files": 1560,
+    "types": 2483,
+    "methods": 33580,
+    "fields": 4225,
+    "constants": 1506,
+    "parse_errors": 0
+  },
+  "entities": [
+    {
+      "entity": "methods",
+      "truth": 32650,
+      "graphify_scored": true,
+      "kora": {
+        "found": 32650,
+        "matched": 32650,
+        "missed": 0,
+        "extra": 0,
+        "recall": 100.0,
+        "precision": 100.0
+      },
+      "graphify": {
+        "found": 30903,
+        "matched": 30903,
+        "missed": 1747,
+        "extra": 0,
+        "recall": 94.6,
+        "precision": 100.0
+      }
+    },
+    {
+      "entity": "types",
+      "truth": 2314,
+      "graphify_scored": false,
+      "kora": {
+        "found": 2314,
+        "matched": 2314,
+        "missed": 0,
+        "extra": 0,
+        "recall": 100.0,
+        "precision": 100.0
+      },
+      "graphify": {
+        "found": 0,
+        "matched": 0,
+        "missed": 2314,
+        "extra": 0,
+        "recall": 0.0,
+        "precision": 0.0
+      }
+    },
+    {
+      "entity": "constants",
+      "truth": 1454,
+      "graphify_scored": false,
+      "kora": {
+        "found": 1454,
+        "matched": 1454,
+        "missed": 0,
+        "extra": 0,
+        "recall": 100.0,
+        "precision": 100.0
+      },
+      "graphify": {
+        "found": 0,
+        "matched": 0,
+        "missed": 1454,
+        "extra": 0,
+        "recall": 0.0,
+        "precision": 0.0
+      }
+    },
+    {
+      "entity": "types+constants",
+      "truth": 2314,
+      "graphify_scored": true,
+      "kora": {
+        "found": 2314,
+        "matched": 2314,
+        "missed": 0,
+        "extra": 0,
+        "recall": 100.0,
+        "precision": 100.0
+      },
+      "graphify": {
+        "found": 2159,
+        "matched": 2159,
+        "missed": 155,
+        "extra": 0,
+        "recall": 93.3,
+        "precision": 100.0
+      }
+    },
+    {
+      "entity": "fields",
+      "truth": 4098,
+      "graphify_scored": false,
+      "kora": {
+        "found": 4098,
+        "matched": 4098,
+        "missed": 0,
+        "extra": 0,
+        "recall": 100.0,
+        "precision": 100.0
+      },
+      "graphify": {
+        "found": 0,
+        "matched": 0,
+        "missed": 4098,
+        "extra": 0,
+        "recall": 0.0,
+        "precision": 0.0
+      }
+    }
+  ],
+  "kora_recall_by_kind": [
+    {
+      "plane": "types",
+      "kind": "class",
+      "truth": 2483,
+      "kora_recall": 93.2
+    },
+    {
+      "plane": "methods",
+      "kind": "function",
+      "truth": 33347,
+      "kora_recall": 97.2
+    },
+    {
+      "plane": "methods",
+      "kind": "lambda_fn",
+      "truth": 233,
+      "kora_recall": 100.0
+    },
+    {
+      "plane": "fields",
+      "kind": "class_attribute",
+      "truth": 2141,
+      "kora_recall": 94.1
+    },
+    {
+      "plane": "fields",
+      "kind": "instance_attribute",
+      "truth": 2084,
+      "kora_recall": 100.0
+    },
+    {
+      "plane": "constants",
+      "kind": "module_constant",
+      "truth": 1506,
+      "kora_recall": 96.5
+    }
+  ],
+  "extractor_planes": {
+    "treesitter": 47117
+  },
+  "graphify_nodes_landing_on_a_truth_field": 88,
+  "graphify_field_hits_that_collide_with_a_method_or_type": 88,
+  "preprocessor_disabled_nodes_excluded": 0,
+  "comment_planes": {
+    "kora_rationale": 5317,
+    "kora_doc_ref": 1,
+    "graphify_rationale": 5288,
+    "graphify_doc_ref": 0
+  },
+  "method_line_accuracy_within_2": {
+    "kora": "100.0% (32650/32650)",
+    "graphify": "100.0% (30903/30903)"
+  },
+  "span_end_line_coverage": {
+    "kora": "100.0% (45834/45834)",
+    "graphify": "0% \u2014 source_location is a start line only, no end"
+  },
+  "call_sites": {
+    "kora_total": 211626,
+    "kora_with_receiver": 122504,
+    "kora_qualified_pct": 57.9
+  },
+  "node_totals": {
+    "kora_java": 45834,
+    "graphify_java_all_files": 44019
+  },
+  "extract_ms": {
+    "kora": 5390
+  }
+}

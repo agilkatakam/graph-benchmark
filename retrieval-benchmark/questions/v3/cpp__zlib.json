@@ -1,0 +1,3023 @@
+{
+  "language": "cpp",
+  "repo": "zlib",
+  "pinned_sha": "e3dc0a85b7032e98380dec011bc8f2c2ee0d8fca",
+  "upstream": "https://github.com/madler/zlib.git",
+  "locator": {
+    "tool": "universal-ctags",
+    "version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team",
+    "args": "--fields=+neKzS --extras=+q --output-format=json"
+  },
+  "filters": {
+    "target": 120,
+    "scan_depth": 6000,
+    "min_subject_chars": 20,
+    "max_gold_decls": 5,
+    "no_merges": true,
+    "non_source_pattern": "(^|/)(test|tests|spec|specs|__tests__|testdata|fixtures|examples?|samples?|docs?|doc|website|benchmarks?|vendor|third_party|node_modules)(/|$)|(^|/)[^/]*[._-](test|spec)s?\\.[^/]+$|(^|/)test_[^/]+$",
+    "noise_subject_pattern": "^\\s*(merge\\b|revert\\b|bump\\b|release\\b|version\\b|prepare\\b|\\[maven-release-plugin\\]|update (changelog|copyright|license|readme|deps|dependencies)\\b|chore\\(deps\\)|build\\(deps\\))",
+    "process_subject_pattern": "^\\s*(apply|address|incorporate|implement)\\s+(review|reviewer|pr|code[- ]review|feedback|comments?|suggestions?)\\b|^\\s*(review\\s+)?(comments?|feedback|suggestions?)\\s*$|^\\s*(fix(ed|es)?\\s+)?typos?\\b|^\\s*(code\\s+)?(cleanup|clean\\s*up|formatting|reformat|gofmt|rustfmt|lint(ing)?|style)\\b|^\\s*(minor|small|misc(ellaneous)?|various)\\s+(fix(es)?|change(s)?|update(s)?|cleanup)\\b|^\\s*(wip|nit|nits|rebase|squash|amend)\\b|^\\s*(add|update)\\s+(comments?|javadoc|docstring|documentation)\\s*$"
+  },
+  "selection_stats": {
+    "scanned": 643,
+    "noise_subject": 7,
+    "process_subject": 11,
+    "short_subject": 12,
+    "dup_subject": 0,
+    "no_source_files": 400,
+    "no_gold": 56,
+    "too_many_gold": 33,
+    "not_at_pin": 4,
+    "kept": 120
+  },
+  "questions": [
+    {
+      "id": "cpp__zlib__0000",
+      "question": "Avoid undefined behavior in gzwrite.c.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "e3dc0a85b7032e98380dec011bc8f2c2ee0d8fca",
+        "subject": "Avoid undefined behavior in gzwrite.c.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "gzwrite.c",
+          "symbol": "gz_vacate",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0001",
+      "question": "Correct ENOUGH_LENS and ENOUGH_DIST for PKZIP_BUG_WORKAROUND.",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "63a623cb69cca9c562cce651c578ad4160c2cf00",
+        "subject": "Correct ENOUGH_LENS and ENOUGH_DIST for PKZIP_BUG_WORKAROUND.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "inftrees.h",
+          "symbol": "ENOUGH_DISTS",
+          "kind": "macro",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "inftrees.h",
+          "symbol": "ENOUGH_LENS",
+          "kind": "macro",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0002",
+      "question": "Factor out a set_uniq() function to set the seed with noise.",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "40d05192c770090d3ed267cc9ee9a155ef8ec1d4",
+        "subject": "Factor out a set_uniq() function to set the seed with noise.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "contrib/minizip/skipset.h",
+          "symbol": "set_start",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "contrib/minizip/skipset.h",
+          "symbol": "set_uniq",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0003",
+      "question": "Replace strcpy() with memcpy() in contrib/minizip.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "1ebcfc9ddcc5d18c5330914a70b0f73165b61cfe",
+        "subject": "Replace strcpy() with memcpy() in contrib/minizip.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "contrib/minizip/miniunz.c",
+          "symbol": "makedir",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "contrib/minizip/zip.c",
+          "symbol": "zipAlreadyThere",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0004",
+      "question": "Define NULL in inftrees.c if needed.",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "d7bc8cafee5bdfde98732622d3b99e2f52f7b2eb",
+        "subject": "Define NULL in inftrees.c if needed.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "inftrees.c",
+          "symbol": "NULL",
+          "kind": "macro",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0005",
+      "question": "Match signedness in format specifiers.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "3c173d5851675b8f9ef8a4eb4f90886d6adb2cb2",
+        "subject": "Match signedness in format specifiers.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "trees.c",
+          "symbol": "_tr_flush_block",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "trees.c",
+          "symbol": "build_bl_tree",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "trees.c",
+          "symbol": "send_all_trees",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0006",
+      "question": "Return error codes in minizip miniunz.c and minuzip.c.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "c2711725f707431deee54489ed8a6eb622a0bfbd",
+        "subject": "Return error codes in minizip miniunz.c and minuzip.c.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "contrib/minizip/miniunz.c",
+          "symbol": "do_extract",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "contrib/minizip/miniunz.c",
+          "symbol": "do_extract_onefile",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "contrib/minizip/minizip.c",
+          "symbol": "main",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0007",
+      "question": "Remove extraneous spaces in contrib/minizip/miniunz.c.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "e5c1cd1a85528e24dcd6a58fc1fc37b7ee4077aa",
+        "subject": "Remove extraneous spaces in contrib/minizip/miniunz.c.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "contrib/minizip/miniunz.c",
+          "symbol": "do_extract",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "contrib/minizip/miniunz.c",
+          "symbol": "do_list",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0008",
+      "question": "Update URLs to use https.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "25704162641a9f11191c9e46ee207aa93ed6c0c0",
+        "subject": "Update URLs to use https.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "contrib/minizip/miniunz.c",
+          "symbol": "do_banner",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "contrib/minizip/minizip.c",
+          "symbol": "do_banner",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "contrib/minizip/unzip.c",
+          "symbol": "unz_copyright",
+          "kind": "variable",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "contrib/minizip/zip.c",
+          "symbol": "zip_copyright",
+          "kind": "variable",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0009",
+      "question": "Catch a file open error in contrib/minizip/mztools.c.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "af0aa9b66a2d123a1ca26d9bfe138695012b045b",
+        "subject": "Catch a file open error in contrib/minizip/mztools.c.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "contrib/minizip/mztools.c",
+          "symbol": "unzRepair",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0010",
+      "question": "Check for invalid NULL pointer inputs to zlib operations.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "5c47755331cb7354133b82f357ed767578c95649",
+        "subject": "Check for invalid NULL pointer inputs to zlib operations.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "compress.c",
+          "symbol": "compress2_z",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "gzlib.c",
+          "symbol": "gz_open",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "uncompr.c",
+          "symbol": "uncompress2_z",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0011",
+      "question": "Make sign change in compress.c explicit.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "8ad678edb44570303996db21c99cba44d0b83d59",
+        "subject": "Make sign change in compress.c explicit.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "compress.c",
+          "symbol": "compress2_z",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0012",
+      "question": "Make some down conversions explicit in the gz routines.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "eb4022ee8fc6e7b5d2b9eceaf28753a3ffbd578d",
+        "subject": "Make some down conversions explicit in the gz routines.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "gzread.c",
+          "symbol": "gz_load",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "gzwrite.c",
+          "symbol": "gz_comp",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0013",
+      "question": "Remove all uses of the obsolete keyword \"register\".",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "060c9e7c45f3ef736acffc35a8a83c52763f9a95",
+        "subject": "Remove all uses of the obsolete keyword \"register\".",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "contrib/minizip/crypt.h",
+          "symbol": "update_keys",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "deflate.c",
+          "symbol": "longest_match",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "trees.c",
+          "symbol": "bi_reverse",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0014",
+      "question": "Remedy uninitialized variable warning in minizip.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "55551fe34e04c2768ceb3876c267059ae1838207",
+        "subject": "Remedy uninitialized variable warning in minizip.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "contrib/minizip/unzip.c",
+          "symbol": "unzOpen2_64",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "contrib/minizip/zip.c",
+          "symbol": "zipOpen2_64",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0015",
+      "question": "Replace // with /* comments in minizip zip.c.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "75133f8599b7b4509db50e673c66a42c1da1be03",
+        "subject": "Replace // with /* comments in minizip zip.c.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "contrib/minizip/zip.c",
+          "symbol": "utf8len",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0016",
+      "question": "Remove inline keyword from minizip zip.c.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "74377e7215a1f72261d69725007299ac28c0019f",
+        "subject": "Remove inline keyword from minizip zip.c.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "contrib/minizip/zip.c",
+          "symbol": "utf8len",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0017",
+      "question": "Set bit 11 of the zip header flags in minizip if UTF-8.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "2f752cea32bc30143bfbc714bc43919f8ca4079c",
+        "subject": "Set bit 11 of the zip header flags in minizip if UTF-8.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "contrib/minizip/zip.c",
+          "symbol": "isutf8",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "contrib/minizip/zip.c",
+          "symbol": "utf8len",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "contrib/minizip/zip.c",
+          "symbol": "zipOpenNewFileInZip4_64",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0018",
+      "question": "CMake: Added contrib/puff.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "fb0479a8bdc3364babc9bf10f19ba8e888b9d2d6",
+        "subject": "CMake: Added contrib/puff.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "contrib/puff/bin-writer.c",
+          "symbol": "main",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0019",
+      "question": "CMake: Added contrib/blast.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "5ba29aea46bc135dcde7bcf88314b816d77a1cf6",
+        "subject": "CMake: Added contrib/blast.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "contrib/blast/blast.h",
+          "symbol": "local",
+          "kind": "macro",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0020",
+      "question": "Zero inflate state on allocation.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "ecbaf031f81ddfcff200dcfd052df48c9047f3cf",
+        "subject": "Zero inflate state on allocation.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "inflate.c",
+          "symbol": "inflateCopy",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "inflate.c",
+          "symbol": "inflateInit2_",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0021",
+      "question": "Avoid Visual C warning in gzread.c.",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "fee7c52428e9255b78e9cb0f7b7af91a54fe9cf6",
+        "subject": "Avoid Visual C warning in gzread.c.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "gzread.c",
+          "symbol": "gzread",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0022",
+      "question": "Prevent the use of insecure functions without an explicit request.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "fd366384cf324d750596feb03be44ddf4d1e6acd",
+        "subject": "Prevent the use of insecure functions without an explicit request.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "gzwrite.c",
+          "symbol": "gzprintf",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "gzwrite.c",
+          "symbol": "gzvprintf",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "zutil.c",
+          "symbol": "zlibCompileFlags",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0023",
+      "question": "Copy only the initialized window contents in inflateCopy.",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "3509ab515f29002f64455d6e34e19df0c16b1707",
+        "subject": "Copy only the initialized window contents in inflateCopy.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "inflate.c",
+          "symbol": "inflateCopy",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0024",
+      "question": "Check for negative lengths in crc32_combine functions.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "ba829a458576d1ff0f26fc7230c6de816d1f6a77",
+        "subject": "Check for negative lengths in crc32_combine functions.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "crc32.c",
+          "symbol": "crc32_combine64",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "crc32.c",
+          "symbol": "crc32_combine_gen64",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0025",
+      "question": "Avoid mixed signedness compare in gzwrite.c.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "9aa11a7ed2240b1ccaa15fb5c74a639e6d6220d9",
+        "subject": "Avoid mixed signedness compare in gzwrite.c.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "gzwrite.c",
+          "symbol": "gz_vacate",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0026",
+      "question": "Return all available uncompressed data on error in gzread.c.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "370ef1b41fd35fbfcf2af317ef3d8065a132f27a",
+        "subject": "Return all available uncompressed data on error in gzread.c.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "gzlib.c",
+          "symbol": "gz_open",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "gzread.c",
+          "symbol": "gz_decomp",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "gzread.c",
+          "symbol": "gz_read",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "gzread.c",
+          "symbol": "gzgets",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0027",
+      "question": "Fix indentation in gzread.c.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "562b823635fdcd26e44961f6bd213ae0c10be098",
+        "subject": "Fix indentation in gzread.c.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "gzread.c",
+          "symbol": "gz_skip",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0028",
+      "question": "Allow gzflush() to write empty gzip members.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "a2b61271a362d4881b9f67fb92455f4fbbab06df",
+        "subject": "Allow gzflush() to write empty gzip members.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "gzwrite.c",
+          "symbol": "gz_comp",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0029",
+      "question": "Add a \"G\" option to force gzip, disabling transparency in gzread().",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "1ab1026a20282383d9cd2282f81461655bea4028",
+        "subject": "Add a \"G\" option to force gzip, disabling transparency in gzread().",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "gzlib.c",
+          "symbol": "gz_open",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "gzread.c",
+          "symbol": "gz_look",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "gzread.c",
+          "symbol": "gzdirect",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0030",
+      "question": "Fix bug in inflatePrime() for 16-bit ints.",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "473f78532aed8f5a8d55cd6e7b305160db9cf742",
+        "subject": "Fix bug in inflatePrime() for 16-bit ints.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "inflate.c",
+          "symbol": "inflatePrime",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "inflate.c",
+          "symbol": "inflateResetKeep",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0031",
+      "question": "Constrain line lengths in inflate code.",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "68320827df77cda0b1d411aa18148016a8c462c3",
+        "subject": "Constrain line lengths in inflate code.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "infback.c",
+          "symbol": "inflateBack",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "inffast.c",
+          "symbol": "inflate_fast",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "inflate.c",
+          "symbol": "inflate",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0032",
+      "question": "Avoid a fruitless memory copy in gzread.c.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "aa27ba467717707881e4ae925849e6229ceabf38",
+        "subject": "Avoid a fruitless memory copy in gzread.c.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "gzread.c",
+          "symbol": "gz_avail",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0033",
+      "question": "Avoid use of memcpy() in inflate when areas can overlap.",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "ab0266a36271746cea957f9edefc2ccf78aa2074",
+        "subject": "Avoid use of memcpy() in inflate when areas can overlap.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "inflate.c",
+          "symbol": "inflate",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0034",
+      "question": "Fix indent in infback.c.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "71045aef60fc8d808ce31993224eb49156c4698a",
+        "subject": "Fix indent in infback.c.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "infback.c",
+          "symbol": "inflateBackInit_",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0035",
+      "question": "Avoid attempting to redefine z_const in zconf.h.",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "6d3a66a11a9d98c80d5b6a36d489263a389c6b90",
+        "subject": "Avoid attempting to redefine z_const in zconf.h.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "zconf.h",
+          "symbol": "z_const",
+          "kind": "macro",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0036",
+      "question": "Avoid out-of-bounds pointer arithmetic in inflateCopy().",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "f7d01aae6ec6115184de821b93fa47810abd88f9",
+        "subject": "Avoid out-of-bounds pointer arithmetic in inflateCopy().",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "inflate.c",
+          "symbol": "inflate",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0037",
+      "question": "Avoid the use of a reserved macro name in contrib/minizip/ioapi.h.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "fff132fe7c41030b45eda2883e0b092697ef1a27",
+        "subject": "Avoid the use of a reserved macro name in contrib/minizip/ioapi.h.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "contrib/minizip/ioapi.h",
+          "symbol": "ZLIBIOAPI64_H",
+          "kind": "macro",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0038",
+      "question": "Add old gcc ULONG_LONG_MAX macro to find a 64-bit type in zutil.h.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "545f1949635949159fa6282e81712aec32b5d4f1",
+        "subject": "Add old gcc ULONG_LONG_MAX macro to find a 64-bit type in zutil.h.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "zutil.h",
+          "symbol": "Z_U8",
+          "kind": "macro",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0039",
+      "question": "One more correction for deflateUsed() bits in stored case.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "3adaa095a7a6c3f2cc00f73311f9bc8688c21aa7",
+        "subject": "One more correction for deflateUsed() bits in stored case.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "deflate.c",
+          "symbol": "deflate_stored",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0040",
+      "question": "Correct used bits from deflateUsed() for deflate_stored() case.",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "884e0c0809e4cc5e88d6545d1c49de7946c1b1ca",
+        "subject": "Correct used bits from deflateUsed() for deflate_stored() case.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "deflate.c",
+          "symbol": "deflate_stored",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0041",
+      "question": "Use z_const for setting msg to literal strings.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "2ba25b2ddab9aa939c321d087fcfca573a9cca55",
+        "subject": "Use z_const for setting msg to literal strings.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "contrib/infback9/infback9.c",
+          "symbol": "inflateBack9",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "infback.c",
+          "symbol": "inflateBack",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "inffast.c",
+          "symbol": "inflate_fast",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "inflate.c",
+          "symbol": "inflate",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0042",
+      "question": "Make z_off_t 64 bits by default.",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "c5e87dcdef72abfb599579bb1b8176948be979c9",
+        "subject": "Make z_off_t 64 bits by default.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "zconf.h",
+          "symbol": "z_off_t",
+          "kind": "macro",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0043",
+      "question": "Avoid conversion warning on 32-bit architectures in minizip.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "d201f04c72b0881220f5ba75ca19fd0e19fa848b",
+        "subject": "Avoid conversion warning on 32-bit architectures in minizip.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "contrib/minizip/skipset.h",
+          "symbol": "set_start",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0044",
+      "question": "Use long long offsets for MinGW.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "90c677bc25f7ebf8be95ab0b4fe752c095417600",
+        "subject": "Use long long offsets for MinGW.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "zconf.h",
+          "symbol": "z_off64_t",
+          "kind": "macro",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0045",
+      "question": "Improve detection of UNIX-style systems in minizip.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "f02ea29e5f5f1b14e71dfdf44bf39ee969ca9bde",
+        "subject": "Improve detection of UNIX-style systems in minizip.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "contrib/minizip/miniunz.c",
+          "symbol": "change_file_date",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "contrib/minizip/miniunz.c",
+          "symbol": "mymkdir",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0046",
+      "question": "Update old comment in inflate.h.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "9f418e1028d98cd4782fd3a2b883eaaf1a09cae5",
+        "subject": "Update old comment in inflate.h.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "inflate.h",
+          "symbol": "inflate_state::bits",
+          "kind": "member",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0047",
+      "question": "Avoid signed shift in minizip zip.c.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "99b229487c2997b4b22eaef90fedfbff4d8826cc",
+        "subject": "Avoid signed shift in minizip zip.c.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "contrib/minizip/zip.c",
+          "symbol": "block_get2",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0048",
+      "question": "Improve random number seeding in skipset.h.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "f60ce91139b52f8cc19714137a02b6cbd16fa07c",
+        "subject": "Improve random number seeding in skipset.h.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "contrib/minizip/skipset.h",
+          "symbol": "set_start",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0049",
+      "question": "Make deflateBound() more conservative and handle Z_STREAM_END.",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "a8c321be84c6669256a2b6f1a3ff1e3eebc28594",
+        "subject": "Make deflateBound() more conservative and handle Z_STREAM_END.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "deflate.c",
+          "symbol": "deflateBound",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0050",
+      "question": "Reduce Windows header inclusion to speed up compilation.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "72d6aa2672c91d10f8f58ee796ed8d44325faca4",
+        "subject": "Reduce Windows header inclusion to speed up compilation.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "gzguts.h",
+          "symbol": "WIN32_LEAN_AND_MEAN",
+          "kind": "macro",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "gzguts.h",
+          "symbol": "_CRT_NONSTDC_NO_DEPRECATE",
+          "kind": "macro",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "gzguts.h",
+          "symbol": "_CRT_SECURE_NO_WARNINGS",
+          "kind": "macro",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0051",
+      "question": "Use 64-bit offsets in DJGPP.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "04134633fa6f8a9ac87ffd4b2683ca61bd41acd6",
+        "subject": "Use 64-bit offsets in DJGPP.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "zconf.h",
+          "symbol": "z_off64_t",
+          "kind": "macro",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0052",
+      "question": "Keep lines short in gzread.c.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "ceac32f156c4d39bf991e1163223b8d910a258d3",
+        "subject": "Keep lines short in gzread.c.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "gzread.c",
+          "symbol": "gzfread",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0053",
+      "question": "Correct a variable type in deflate.c.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "7a7202de3568522dfc75a455927ccbd7faf63411",
+        "subject": "Correct a variable type in deflate.c.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "deflate.c",
+          "symbol": "deflate_stored",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0054",
+      "question": "Address Microsoft deprecation warnings.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "985a62d11802b44d1d1049ddd692038923da6f0b",
+        "subject": "Address Microsoft deprecation warnings.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "contrib/puff/pufftest.c",
+          "symbol": "SET_BINARY_MODE",
+          "kind": "macro",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "gzguts.h",
+          "symbol": "_CRT_SECURE_NO_WARNINGS",
+          "kind": "macro",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "gzlib.c",
+          "symbol": "gz_open",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "gzlib.c",
+          "symbol": "gz_strwinerror",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0055",
+      "question": "Assume no snprintf() or vsnprintf() if C89/90 in gzguts.h.",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "e342bb3daef3f6d89dd1d39a3059355db5a64c49",
+        "subject": "Assume no snprintf() or vsnprintf() if C89/90 in gzguts.h.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "gzguts.h",
+          "symbol": "NO_snprintf",
+          "kind": "macro",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "gzguts.h",
+          "symbol": "NO_vsnprintf",
+          "kind": "macro",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "gzguts.h",
+          "symbol": "vsnprintf",
+          "kind": "macro",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0056",
+      "question": "Use _POSIX_C_SOURCE in gzguts.h, instead of _POSIX_SOURCE.",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "1382e661143edb8d132fc63caabaf40f8a42df9b",
+        "subject": "Use _POSIX_C_SOURCE in gzguts.h, instead of _POSIX_SOURCE.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "gzguts.h",
+          "symbol": "_POSIX_C_SOURCE",
+          "kind": "macro",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0057",
+      "question": "Avoid implicit conversion warnings in deflate.c and trees.c.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "8a76f02e0e05860f72a269d305a0e11af224f609",
+        "subject": "Avoid implicit conversion warnings in deflate.c and trees.c.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "deflate.c",
+          "symbol": "deflate_stored",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "trees.c",
+          "symbol": "scan_tree",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0058",
+      "question": "Avoid unterminated file name in contrib/minizip/miniunz.c.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "d4eaa1d939f59822ba3ab0b56a547a8fcde33f7e",
+        "subject": "Avoid unterminated file name in contrib/minizip/miniunz.c.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "contrib/minizip/miniunz.c",
+          "symbol": "do_extract_currentfile",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "contrib/minizip/miniunz.c",
+          "symbol": "do_list",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0059",
+      "question": "Fix a bug in ZLIB_DEBUG compiles in check_match().",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "7af6320ad78b390de42f414fabdc64dc6d67a5ea",
+        "subject": "Fix a bug in ZLIB_DEBUG compiles in check_match().",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "deflate.c",
+          "symbol": "check_match",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0060",
+      "question": "Correct typos in source code.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "fe41d1892117fa81bd49f69b1c87d805635b853c",
+        "subject": "Correct typos in source code.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "contrib/minizip/unzip.c",
+          "symbol": "unzOpenInternal",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0061",
+      "question": "Make the existence of gz_intmax() unconditional.",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "01253ecd7e0a01d311670f2d03c61b82fc12d338",
+        "subject": "Make the existence of gz_intmax() unconditional.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "gzguts.h",
+          "symbol": "GT_OFF",
+          "kind": "macro",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "gzlib.c",
+          "symbol": "gz_intmax",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0062",
+      "question": "Neutralize zip file traversal attacks in miniunz.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "14a5f8f266c16c87ab6c086fc52b770b27701e01",
+        "subject": "Neutralize zip file traversal attacks in miniunz.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "contrib/minizip/miniunz.c",
+          "symbol": "do_extract_currentfile",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0063",
+      "question": "Fix random typos over several source and text files.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "01155ccc3f822a31291a64e4ecd5f1dbb8a8ee63",
+        "subject": "Fix random typos over several source and text files.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "contrib/iostream3/zfstream.h",
+          "symbol": "gzomanip2",
+          "kind": "class",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "contrib/minizip/unzip.c",
+          "symbol": "unz64local_SearchCentralDir64",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "contrib/minizip/unzip.c",
+          "symbol": "unzOpenInternal",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "contrib/minizip/zip.c",
+          "symbol": "zip64local_SearchCentralDir64",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "contrib/minizip/zip.c",
+          "symbol": "zipCloseFileInZipRaw64",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0064",
+      "question": "Fix the copy of pending_buf in deflateCopy() for the LIT_MEM case.",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "60c31985ecdc2b40873564867e1ad2aef0b88697",
+        "subject": "Fix the copy of pending_buf in deflateCopy() for the LIT_MEM case.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "deflate.c",
+          "symbol": "deflateCopy",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "deflate.c",
+          "symbol": "deflateInit2_",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "deflate.h",
+          "symbol": "LIT_BUFS",
+          "kind": "macro",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0065",
+      "question": "Fix pending buffer overflow assert with LIT_MEM allocation.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "ee474ff2d11715485a87b123edbdd615ba218b88",
+        "subject": "Fix pending buffer overflow assert with LIT_MEM allocation.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "trees.c",
+          "symbol": "compress_block",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0066",
+      "question": "Add bounds checking to ERR_MSG() macro, used by zError().",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "431a9b65eacab7efabf2230ba97ff426c0e07f9d",
+        "subject": "Add bounds checking to ERR_MSG() macro, used by zError().",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "zutil.h",
+          "symbol": "ERR_MSG",
+          "kind": "macro",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0067",
+      "question": "Correct repeated words in source file comments and a readme.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "643e17b7498d12ab8d15565662880579692f769d",
+        "subject": "Correct repeated words in source file comments and a readme.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "contrib/minizip/zip.c",
+          "symbol": "LoadCentralDirectoryRecord",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0068",
+      "question": "Fix decision on the emission of Zip64 end records in minizip.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "15c45adb76e81a7e3a8a9e17b2a56eb90f668f44",
+        "subject": "Fix decision on the emission of Zip64 end records in minizip.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "contrib/minizip/zip.c",
+          "symbol": "zipClose",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0069",
+      "question": "Fix bug in inflateSync() for data held in bit buffer.",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "5af7cef45eeef86ddf6ab00b4e363c1eecaf47b6",
+        "subject": "Fix bug in inflateSync() for data held in bit buffer.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "inflate.c",
+          "symbol": "inflateSync",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0070",
+      "question": "Update miniunz version.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "88e50f170525c0a6237ca5ed4db0c620af366fe7",
+        "subject": "Update miniunz version.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "contrib/minizip/miniunz.c",
+          "symbol": "do_banner",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0071",
+      "question": "Reject overflows of zip header fields in minizip.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "73331a6a0481067628f065ffe87bb1d8f787d10c",
+        "subject": "Reject overflows of zip header fields in minizip.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "contrib/minizip/zip.c",
+          "symbol": "zipOpenNewFileInZip4_64",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0072",
+      "question": "Avoid uninitialized and unused warnings in contrib/minizip.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "25bbd7f5a6a172b83b59fab7a80c55d1533dd100",
+        "subject": "Avoid uninitialized and unused warnings in contrib/minizip.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "contrib/minizip/miniunz.c",
+          "symbol": "change_file_date",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "contrib/minizip/miniunz.c",
+          "symbol": "do_list",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "contrib/minizip/miniunz.c",
+          "symbol": "mymkdir",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "contrib/minizip/minizip.c",
+          "symbol": "main",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0073",
+      "question": "Fix bug when using gzflush() with a very small buffer.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "d98251478246c8ef2f405d76e4ef1678c14d7eda",
+        "subject": "Fix bug when using gzflush() with a very small buffer.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "gzlib.c",
+          "symbol": "gzbuffer",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0074",
+      "question": "Fix bug when gzungetc() is used immediately after gzopen().",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "7dd6aa72455ef1f2aacdc28a00d1eaf632d59593",
+        "subject": "Fix bug when gzungetc() is used immediately after gzopen().",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "gzread.c",
+          "symbol": "gzungetc",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0075",
+      "question": "Fix some spelling errors.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "c7ddcc2e0e8bb397ad720564228b538135ec11d8",
+        "subject": "Fix some spelling errors.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "crc32.c",
+          "symbol": "crc32_z",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0076",
+      "question": "Read multiple bytes instead of byte-by-byte in minizip unzip.c.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "be7aa11551e86c9ac77ee1bff48300e59ba1e3c4",
+        "subject": "Read multiple bytes instead of byte-by-byte in minizip unzip.c.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "contrib/minizip/unzip.c",
+          "symbol": "unz64local_getLong",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "contrib/minizip/unzip.c",
+          "symbol": "unz64local_getLong64",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "contrib/minizip/unzip.c",
+          "symbol": "unz64local_getShort",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "contrib/minizip/unzip.c",
+          "symbol": "unzGetCurrentFileInfo",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0077",
+      "question": "Correct dummy filetime() prototype in minizip.c.",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "f679a939d3db557fec0304602a179f0ac78e5afa",
+        "subject": "Correct dummy filetime() prototype in minizip.c.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "contrib/minizip/minizip.c",
+          "symbol": "filetime",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0078",
+      "question": "Match sign of printf directive to sign of argument in testzlib.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "b3f23f7fb7b00592af90f8b2d3c041bf0321dc52",
+        "subject": "Match sign of printf directive to sign of argument in testzlib.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "contrib/testzlib/testzlib.c",
+          "symbol": "main",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0079",
+      "question": "Match sign of printf directive to sign of argument in minizip.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "dcd0d86b9e745ea79d74ba6fcd81f807b89e2f95",
+        "subject": "Match sign of printf directive to sign of argument in minizip.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "contrib/minizip/minizip.c",
+          "symbol": "isLargeFile",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0080",
+      "question": "Fix logic error in minizip argument processing.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "3061e5013c2569974fd7d830f2776b38da4e2691",
+        "subject": "Fix logic error in minizip argument processing.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "contrib/minizip/minizip.c",
+          "symbol": "main",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0081",
+      "question": "Fix reading disk number start on zip64 files in minizip.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "e0bd0ad6e4d8afd2bc3d55d84d459a0e2c0e2890",
+        "subject": "Fix reading disk number start on zip64 files in minizip.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "contrib/minizip/unzip.c",
+          "symbol": "unz64local_GetCurrentFileInfoInternal",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0082",
+      "question": "minizip: Fix being unable to open empty zip file",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "f209ca7be7981dc8fca79428706057e4ebc929ee",
+        "subject": "minizip: Fix being unable to open empty zip file",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "contrib/minizip/unzip.c",
+          "symbol": "CENTRALDIRINVALID",
+          "kind": "macro",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "contrib/minizip/unzip.c",
+          "symbol": "unz64local_SearchCentralDir",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "contrib/minizip/unzip.c",
+          "symbol": "unz64local_SearchCentralDir64",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "contrib/minizip/unzip.c",
+          "symbol": "unzOpenInternal",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0083",
+      "question": "Fix cast in minizip's ioapi.c for Windows.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "05527a1b1ef39014b44281fbbbec5deabb4be106",
+        "subject": "Fix cast in minizip's ioapi.c for Windows.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "contrib/minizip/ioapi.c",
+          "symbol": "fseek64_file_func",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0084",
+      "question": "Remove K&R function definitions from infback9.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "c4aa356742e03af6670c043905cd2c96f515ad72",
+        "subject": "Remove K&R function definitions from infback9.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "contrib/infback9/infback9.c",
+          "symbol": "inflateBack9",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "contrib/infback9/infback9.c",
+          "symbol": "inflateBack9End",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "contrib/infback9/infback9.c",
+          "symbol": "inflateBack9Init_",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "contrib/infback9/infback9.c",
+          "symbol": "makefixed9",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "contrib/infback9/inftree9.c",
+          "symbol": "inflate_table9",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0085",
+      "question": "Assure that inflatePrime() can't shift a 32-bit integer by 32 bits.",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "12b345c4309b37ab905e7e702021c1c2d2c095cc",
+        "subject": "Assure that inflatePrime() can't shift a 32-bit integer by 32 bits.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "inflate.c",
+          "symbol": "inflatePrime",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0086",
+      "question": "Make z_size_t 64 bits when compiling on Windows with Z_SOLO.",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "fa8cd50ada68b873c754766bc73b12080b7b309e",
+        "subject": "Make z_size_t 64 bits when compiling on Windows with Z_SOLO.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "zconf.h",
+          "symbol": "z_size_t",
+          "kind": "typedef",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0087",
+      "question": "Fix crash when gzsetparams() attempted for transparent write.",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "02a6049eb3884c430268bb0fe3296d597a03174c",
+        "subject": "Fix crash when gzsetparams() attempted for transparent write.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "gzwrite.c",
+          "symbol": "gzsetparams",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0088",
+      "question": "Fix bug in deflateBound() for level 0 and memLevel 9.",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "e554695638228b846d49657f31eeff0ca4680e8a",
+        "subject": "Fix bug in deflateBound() for level 0 and memLevel 9.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "deflate.c",
+          "symbol": "deflateBound",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0089",
+      "question": "Avoid C89 warning in contrib/minizip/crypt.h.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "2bb4961990e96ecab1ac6ae3566be42a5278b1a6",
+        "subject": "Avoid C89 warning in contrib/minizip/crypt.h.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "contrib/minizip/crypt.h",
+          "symbol": "ZCR_SEED2",
+          "kind": "macro",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0090",
+      "question": "Comment out unused code in contrib/minizip/minizip.c.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "e61ff990c0a97aa17e76e7e388e6fc525da5300b",
+        "subject": "Comment out unused code in contrib/minizip/minizip.c.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "contrib/minizip/minizip.c",
+          "symbol": "getFileCrc",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0091",
+      "question": "Don't try to include unistd.h on Windows with LLVM.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "19f8551627d2a89b910d961fc9c7f626f3af7b21",
+        "subject": "Don't try to include unistd.h on Windows with LLVM.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "zconf.h",
+          "symbol": "Z_HAVE_UNISTD_H",
+          "kind": "macro",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0092",
+      "question": "Remove some harmless semicolons in minizip.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "4572dfbe99b9fc6ea3aa1fa938e270bd45973cd0",
+        "subject": "Remove some harmless semicolons in minizip.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "contrib/minizip/miniunz.c",
+          "symbol": "main",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "contrib/minizip/minizip.c",
+          "symbol": "main",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0093",
+      "question": "Provide missing function prototypes in CRC-32 code. [fredgan]",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "888b3da8deebe1b637259b62256512fea104d690",
+        "subject": "Provide missing function prototypes in CRC-32 code. [fredgan]",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "crc32.c",
+          "symbol": "ARMCRC32",
+          "kind": "macro",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0094",
+      "question": "Avoid undefined negation behavior if windowBits is INT_MIN.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "a9e14e85415eb326000f352bce3fcb04a125406d",
+        "subject": "Avoid undefined negation behavior if windowBits is INT_MIN.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "deflate.c",
+          "symbol": "deflateInit2_",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "inflate.c",
+          "symbol": "inflateReset2",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0095",
+      "question": "Fix incorrect cast in minizip's ioapi.c.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "9b291c9f013f99ad494ffecf4295cb2f594a18e3",
+        "subject": "Fix incorrect cast in minizip's ioapi.c.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "contrib/minizip/ioapi.c",
+          "symbol": "fseek64_file_func",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0096",
+      "question": "Remove redundant check in gz_look().",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "9331fecc10d1409b8f63cbb3cc2365596255d672",
+        "subject": "Remove redundant check in gz_look().",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "gzread.c",
+          "symbol": "gz_look",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0097",
+      "question": "Remove deleted assembler code references.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "d0704a820186481da35d08f4b655881e1d32089f",
+        "subject": "Remove deleted assembler code references.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "zutil.c",
+          "symbol": "zlibCompileFlags",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0098",
+      "question": "Add new crc32 functions to z_ prefix defines.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "3e4aa45834c2e76c1f21f9c463c2f356f3bb512c",
+        "subject": "Add new crc32 functions to z_ prefix defines.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "zconf.h",
+          "symbol": "crc32_combine_gen",
+          "kind": "macro",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "zconf.h",
+          "symbol": "crc32_combine_gen64",
+          "kind": "macro",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "zconf.h",
+          "symbol": "crc32_combine_op",
+          "kind": "macro",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0099",
+      "question": "Add WIN32_LEAN_AND_MEAN for windows.h include.",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "456775aec853102d5de9de3b225a547aa1583f02",
+        "subject": "Add WIN32_LEAN_AND_MEAN for windows.h include.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "zconf.h",
+          "symbol": "WIN32_LEAN_AND_MEAN",
+          "kind": "macro",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0100",
+      "question": "Tighten deflateBound bounds.",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "4078713e3bdd4a310fde906a1d6b74a6bfe77e5b",
+        "subject": "Tighten deflateBound bounds.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "deflate.c",
+          "symbol": "deflateBound",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0101",
+      "question": "Fix bug in block type selection when Z_FIXED used.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "7fabcb53576aca08b8e25174eb7b0df7c585e4e0",
+        "subject": "Fix bug in block type selection when Z_FIXED used.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "trees.c",
+          "symbol": "_tr_flush_block",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0102",
+      "question": "Fix extra field processing bug that dereferences NULL state->head.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "1eb7682f845ac9e9bf9ae35bbfb3bad5dacbd91d",
+        "subject": "Fix extra field processing bug that dereferences NULL state->head.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "inflate.c",
+          "symbol": "inflate",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0103",
+      "question": "Fix a bug when getting a gzip header extra field with inflate().",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "eff308af425b67093bab25f80f1ae950166bece1",
+        "subject": "Fix a bug when getting a gzip header extra field with inflate().",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "inflate.c",
+          "symbol": "inflate",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0104",
+      "question": "Have infback() deliver all of the available output up to any error.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "b8bd09801f4a2c224655e14edffc5793943a33d2",
+        "subject": "Have infback() deliver all of the available output up to any error.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "infback.c",
+          "symbol": "inflateBack",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0105",
+      "question": "Fix inflateBack to detect invalid input with distances too far.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "2333419cd76cb9ae5f15c9b240b16a2052b27691",
+        "subject": "Fix inflateBack to detect invalid input with distances too far.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "infback.c",
+          "symbol": "inflateBackInit_",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0106",
+      "question": "Fix odd error in Visual C compiler preventing automatic promotion.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "7ecf7c7458578d05a20fa481436dd5c58db112f7",
+        "subject": "Fix odd error in Visual C compiler preventing automatic promotion.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "crc32.c",
+          "symbol": "crc32_combine",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "crc32.c",
+          "symbol": "crc32_combine_gen",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0107",
+      "question": "Fix missing ZEXPORT for crc32_combine_op().",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "6c532a8e8a2fcedc4abbe2378dd26b5d89cf1c4a",
+        "subject": "Fix missing ZEXPORT for crc32_combine_op().",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "crc32.c",
+          "symbol": "crc32_combine_op",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0108",
+      "question": "Correct incorrect inputs provided to the CRC functions.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "ec3df00224d4b396e2ac6586ab5d25f673caa4c2",
+        "subject": "Correct incorrect inputs provided to the CRC functions.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "crc32.c",
+          "symbol": "crc32_combine64",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "crc32.c",
+          "symbol": "crc32_combine_op",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "crc32.c",
+          "symbol": "crc32_z",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0109",
+      "question": "Fix compile with Windows 10 SDK. (gvollant)",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "ce12773790517034317274f5c65ba70cfeea29f7",
+        "subject": "Fix compile with Windows 10 SDK. (gvollant)",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "contrib/minizip/iowin32.c",
+          "symbol": "WINAPI_FAMILY_ONE_PARTITION",
+          "kind": "macro",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0110",
+      "question": "Silence some warnings from Visual Studio C.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "3df842426b53522e232da7aa06d5ef10eeb5ec4a",
+        "subject": "Silence some warnings from Visual Studio C.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "deflate.h",
+          "symbol": "_tr_tally_dist",
+          "kind": "macro",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "trees.c",
+          "symbol": "_tr_tally",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0111",
+      "question": "Fix crc32.c to compile local functions only if used.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "296967c7b7b6bfb59ed8b831391359b2c0153e3d",
+        "subject": "Fix crc32.c to compile local functions only if used.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "crc32.c",
+          "symbol": "ARMCRC32",
+          "kind": "macro",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "crc32.c",
+          "symbol": "byte_swap",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "crc32.c",
+          "symbol": "crc_word",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "crc32.c",
+          "symbol": "crc_word_big",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0112",
+      "question": "Add fallthrough comments for gcc.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "76f70abbc73f8887ed42b12cf5c895b386595d59",
+        "subject": "Add fallthrough comments for gcc.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "infback.c",
+          "symbol": "inflateBack",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "inflate.c",
+          "symbol": "inflate",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0113",
+      "question": "Fix unztell64() in minizip to work past 4GB. (Dani\u00ebl H\u00f6rchner)",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "58ca4e57ce7d76734d8b5afa03d205f694419b17",
+        "subject": "Fix unztell64() in minizip to work past 4GB. (Dani\u00ebl H\u00f6rchner)",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "contrib/minizip/unzip.c",
+          "symbol": "unzReadCurrentFile",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0114",
+      "question": "minizip warning fix if MAXU32 already defined. (gvollant)",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "b135d46eaf5ba36b549be9db857c580f00b6182a",
+        "subject": "minizip warning fix if MAXU32 already defined. (gvollant)",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "contrib/minizip/ioapi.h",
+          "symbol": "MAXU32",
+          "kind": "macro",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0115",
+      "question": "Replace black/white with allow/block. (theresa-m)",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "8678871f18f4dd51101a9db1e37791f975969079",
+        "subject": "Replace black/white with allow/block. (theresa-m)",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "trees.c",
+          "symbol": "detect_data_type",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0116",
+      "question": "Fix indentation in minizip's zip.c.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "c3f3043f7aa80750245f8166a338c4877020b589",
+        "subject": "Fix indentation in minizip's zip.c.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "contrib/minizip/zip.c",
+          "symbol": "zip64local_SearchCentralDir",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0117",
+      "question": "Change macro name in inflate.c to avoid collision in VxWorks.",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "53ce2713117ef2a8ed682d77b944df991c499252",
+        "subject": "Change macro name in inflate.c to avoid collision in VxWorks.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "inflate.c",
+          "symbol": "UPDATE_CHECK",
+          "kind": "macro",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "inflate.c",
+          "symbol": "inflate",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0118",
+      "question": "Add use of the ARMv8 crc32 instructions when requested.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "52fc78baf216dac4e76c5eb3bd940f68e87086da",
+        "subject": "Add use of the ARMv8 crc32 instructions when requested.",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "crc32.c",
+          "symbol": "Z_BATCH",
+          "kind": "macro",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "crc32.c",
+          "symbol": "Z_BATCH_MIN",
+          "kind": "macro",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "crc32.c",
+          "symbol": "Z_BATCH_ZEROS",
+          "kind": "macro",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "crc32.c",
+          "symbol": "crc32_z",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "cpp__zlib__0119",
+      "question": "Don't bother computing check value after successful inflateSync().",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "0d36ec47f310478549c0864f215ab5c0114c49ba",
+        "subject": "Don't bother computing check value after successful inflateSync().",
+        "upstream": "https://github.com/madler/zlib.git"
+      },
+      "gold": [
+        {
+          "file": "inflate.c",
+          "symbol": "inflate",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "inflate.c",
+          "symbol": "inflateResetKeep",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "inflate.c",
+          "symbol": "inflateSync",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "inflate.h",
+          "symbol": "inflate_state",
+          "kind": "struct",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "inflate.h",
+          "symbol": "inflate_state::flags",
+          "kind": "member",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    }
+  ]
+}

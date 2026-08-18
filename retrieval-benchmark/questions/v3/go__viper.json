@@ -1,0 +1,3107 @@
+{
+  "language": "go",
+  "repo": "viper",
+  "pinned_sha": "528f7416c4b56a4948673984b190bf8713f0c3c4",
+  "upstream": "https://github.com/spf13/viper.git",
+  "locator": {
+    "tool": "universal-ctags",
+    "version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team",
+    "args": "--fields=+neKzS --extras=+q --output-format=json"
+  },
+  "filters": {
+    "target": 120,
+    "scan_depth": 6000,
+    "min_subject_chars": 20,
+    "max_gold_decls": 5,
+    "no_merges": true,
+    "non_source_pattern": "(^|/)(test|tests|spec|specs|__tests__|testdata|fixtures|examples?|samples?|docs?|doc|website|benchmarks?|vendor|third_party|node_modules)(/|$)|(^|/)[^/]*[._-](test|spec)s?\\.[^/]+$|(^|/)test_[^/]+$",
+    "noise_subject_pattern": "^\\s*(merge\\b|revert\\b|bump\\b|release\\b|version\\b|prepare\\b|\\[maven-release-plugin\\]|update (changelog|copyright|license|readme|deps|dependencies)\\b|chore\\(deps\\)|build\\(deps\\))",
+    "process_subject_pattern": "^\\s*(apply|address|incorporate|implement)\\s+(review|reviewer|pr|code[- ]review|feedback|comments?|suggestions?)\\b|^\\s*(review\\s+)?(comments?|feedback|suggestions?)\\s*$|^\\s*(fix(ed|es)?\\s+)?typos?\\b|^\\s*(code\\s+)?(cleanup|clean\\s*up|formatting|reformat|gofmt|rustfmt|lint(ing)?|style)\\b|^\\s*(minor|small|misc(ellaneous)?|various)\\s+(fix(es)?|change(s)?|update(s)?|cleanup)\\b|^\\s*(wip|nit|nits|rebase|squash|amend)\\b|^\\s*(add|update)\\s+(comments?|javadoc|docstring|documentation)\\s*$"
+  },
+  "selection_stats": {
+    "scanned": 869,
+    "noise_subject": 225,
+    "process_subject": 20,
+    "short_subject": 145,
+    "dup_subject": 1,
+    "no_source_files": 206,
+    "no_gold": 41,
+    "too_many_gold": 53,
+    "not_at_pin": 58,
+    "kept": 120
+  },
+  "questions": [
+    {
+      "id": "go__viper__0000",
+      "question": "doc: add documentation to all exported methods",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "2959599d7d2bf11c97e46eded5546ba0c48ebbf7",
+        "subject": "doc: add documentation to all exported methods",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.ConfigFileUsed",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "viper.go",
+          "symbol": "viper.Debug",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0001",
+      "question": "apply review comments",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "196113234fe04cbaae663b8bb992988a71353e42",
+        "subject": "refactor: apply review comments",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "errors.go",
+          "symbol": "viper.ConfigFileNotFoundError.Unwrap",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "errors.go",
+          "symbol": "viper.FileNotFoundError.fileLookup",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "errors.go",
+          "symbol": "viper.FileNotFoundFromSearchError.Error",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "errors.go",
+          "symbol": "viper.FileNotFoundFromSearchError.fileLookup",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.ReadInConfig",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0002",
+      "question": "wrap file not found error",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "3504ce391d2047e88bc20a09497d8d8b71ff448d",
+        "subject": "fix: wrap file not found error",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.ReadInConfig",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0003",
+      "question": "add explanation on read in config errors",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "5ae04a8bbfa916ff4842058be8eb5c636f0ba501",
+        "subject": "docs: add explanation on read in config errors",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.ReadInConfig",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0004",
+      "question": "apply suggestions from code review",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "2d525ac880f4068c7c78ade8899121d92c3c1d41",
+        "subject": "refactor: apply suggestions from code review",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "errors.go",
+          "symbol": "viper.FileLookupError",
+          "kind": "interface",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "errors.go",
+          "symbol": "viper.FileLookupError.fileLookup",
+          "kind": "methodSpec",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "errors.go",
+          "symbol": "viper.FileNotFoundError",
+          "kind": "struct",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "errors.go",
+          "symbol": "viper.FileNotFoundError.path",
+          "kind": "member",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0005",
+      "question": "use the built-in max/min to simplify the code",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "4df8a66f9eea365fafbcb0ca41fcbd2369609b8e",
+        "subject": "refactor: use the built-in max/min to simplify the code",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "util.go",
+          "symbol": "viper.parseSizeInBytes",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0006",
+      "question": "Add support for UintSlice and Float64Slice flags",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "260b8e9a3c75f49c374251f10fa1529d9e704b6a",
+        "subject": "Add support for UintSlice and Float64Slice flags",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.find",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0007",
+      "question": "config type check when loading any config",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "1508a7ba4478e59a385419023ed91eeeb8d522b4",
+        "subject": "fix: config type check when loading any config",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.MergeConfig",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.ReadConfig",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.unmarshalReader",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0008",
+      "question": "get config type from v.configType or config file ext",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "cbc92421b1817ce38d1e3454e7ae100f8a0a445a",
+        "subject": "fix(config): get config type from v.configType or config file ext",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.MergeConfig",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.ReadConfig",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0009",
+      "question": "copy keydelim from parent chart in viper.Sub()",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "864a85aadadbaa4dce1e474714457ed37c553ce1",
+        "subject": "feat: copy keydelim from parent chart in viper.Sub()",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.Sub",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0010",
+      "question": "add function to write config to writer",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "ae564f05cb912ebe4642ff28b81b9c4cf8302071",
+        "subject": "feat: add function to write config to writer",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.WriteConfigTo",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.marshalWriter",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "viper.go",
+          "symbol": "viper.WriteConfigTo",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0011",
+      "question": "drop config type switch from marshaling",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "ebe913cc532698c56f06d22cffac581bd48e2d9e",
+        "subject": "feat: drop config type switch from marshaling",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.marshalWriter",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.unmarshalReader",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0012",
+      "question": "use new codec registry",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "7f90845afce9524e94a4db1ded540a81863d2aed",
+        "subject": "feat(encoding): use new codec registry",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.New",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0013",
+      "question": "add docs to codec registry",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "e033c8e8dc2d6cb8c7c95f7fc8dddfd0d40ff6ed",
+        "subject": "docs(encoding): add docs to codec registry",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "encoding.go",
+          "symbol": "viper.WithCodecRegistry",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "encoding.go",
+          "symbol": "viper.WithDecoderRegistry",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "encoding.go",
+          "symbol": "viper.WithEncoderRegistry",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0014",
+      "question": "rename new codec registries",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "8492c8d45176748f523bbe611004ef8e553c7dc3",
+        "subject": "refactor(encoding): rename new codec registries",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.New",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.decoderRegistry",
+          "kind": "member",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.encoderRegistry",
+          "kind": "member",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.marshalWriter",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.unmarshalReader",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0015",
+      "question": "allow enabling bind struct with an option",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "96ad74f6ae3e22a2349821a1c2bc197eaae5a14d",
+        "subject": "feat: allow enabling bind struct with an option",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "experimental.go",
+          "symbol": "viper",
+          "kind": "package",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "experimental.go",
+          "symbol": "viper.ExperimentalBindStruct",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0016",
+      "question": "allow setting options on the global viper instance",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "3640bcdc46c4700a3f9546cc70e79f8a77c4ed36",
+        "subject": "feat: allow setting options on the global viper instance",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.SetOptions",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0017",
+      "question": "return error when no config type is set",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "a42c1b9f76fa838ab877a10c9c7fc1415a69df5d",
+        "subject": "feat: return error when no config type is set",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.MergeConfig",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.ReadConfig",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0018",
+      "question": "fix tests on windows",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "d59cc8b6cd7097d30ace466a88e0ef9c033becb5",
+        "subject": "test: fix tests on windows",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "file.go",
+          "symbol": "viper.Viper.findConfigFileWithFinder",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0019",
+      "question": "move old config search code",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "df708667891a1379b2fb0f0d16389aa1be420e72",
+        "subject": "refactor: move old config search code",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "file.go",
+          "symbol": "viper.Viper.findConfigFile",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "file.go",
+          "symbol": "viper.Viper.findConfigFileOld",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "file.go",
+          "symbol": "viper.Viper.findConfigFileWithFinder",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0020",
+      "question": "use new finder even when build tag is disabled",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "db0bbd8f9701d85cccbbf878478ed720dd18e307",
+        "subject": "feat: use new finder even when build tag is disabled",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "file.go",
+          "symbol": "viper.Viper.findConfigFile",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0021",
+      "question": "do not return early from old search functions",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "1be81c313adc89f18fec4a7f954ce4e52a37e1d7",
+        "subject": "feat: do not return early from old search functions",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.AddConfigPath",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.SetConfigName",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0022",
+      "question": "unexport combined finder for now",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "c9994ee0c675e2ed0c8d89784ef8c079001e4de3",
+        "subject": "feat: unexport combined finder for now",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "finder.go",
+          "symbol": "viper.Finders",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "finder.go",
+          "symbol": "viper.combinedFinder",
+          "kind": "struct",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "finder.go",
+          "symbol": "viper.combinedFinder.Find",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0023",
+      "question": "merge missing struct keys inside UnmarshalExact",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "fb6eb1e8e9fbaa424b113248af35f048c5d86dea",
+        "subject": "fix: merge missing struct keys inside UnmarshalExact",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.UnmarshalExact",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0024",
+      "question": "fix isPathShadowedInFlatMap type cast bug",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "f7363633d1c17fd98cd70783fabc133c41d3f40e",
+        "subject": "fix isPathShadowedInFlatMap type cast bug (#1585)",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.isPathShadowedInFlatMap",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0025",
+      "question": "make Unmarshal work with AutomaticEnv",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "73dfb94c57ad48bcdf3d40b7f47d69c2962d800d",
+        "subject": "feat: make Unmarshal work with AutomaticEnv",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.Unmarshal",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.decodeStructKeys",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0026",
+      "question": "move all settings code to a getter",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "6ea31ae4ca569f048d53a06e91574f1ebe4b0225",
+        "subject": "refactor: move all settings code to a getter",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.AllSettings",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.getSettings",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0027",
+      "question": "drop fsonitfy wrapper",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "464cdab72ae3e0c4e6b3c1cb01065e3e06398325",
+        "subject": "refactor: drop fsonitfy wrapper",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.WatchConfig",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0028",
+      "question": "make use of `strings.Cut`",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "f62f86a84b8395051efe0e490a29f3f89830a3ed",
+        "subject": "refactor: make use of `strings.Cut`",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.stringToIntConv",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "viper.go",
+          "symbol": "viper.stringToStringConv",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0029",
+      "question": "add func GetEnvPrefix",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "731a91be43e1a7cf5d090beafaa7ef0f55561119",
+        "subject": "feat: add func GetEnvPrefix",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.GetEnvPrefix",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.GetEnvPrefix",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0030",
+      "question": "Allow ConfigParseError to unwrap",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "21a7fd828ed231bbe62068d6aafa5aa9f85dc79e",
+        "subject": "Allow ConfigParseError to unwrap (#1433)",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "util.go",
+          "symbol": "viper.ConfigParseError.Unwrap",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0031",
+      "question": "improve log messages",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "53cdb5253a20be742fe6ca7008f58beda1a99c34",
+        "subject": "chore: improve log messages",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.WatchConfig",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0032",
+      "question": "drop std' logger in favor of jww one",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "24ece16a9a4db83c5f5cd0b0fbe48370c42bcdcb",
+        "subject": "drop std' logger in favor of jww one",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.WatchConfig",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0033",
+      "question": "extend viper's pflag binding to stringToInt pflag",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "2ee16310d075301b5c6d25bb2014cc344b1d18bd",
+        "subject": "extend viper's pflag binding to stringToInt pflag",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.find",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "viper.go",
+          "symbol": "viper.stringToIntConv",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0034",
+      "question": "Preserve envPrefix in Sub",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "3970ad177ecc286c1e14b64c18449cb30f73d642",
+        "subject": "Preserve envPrefix in Sub",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.Sub",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0035",
+      "question": "Sub inerits from automaticEnvApplied and envKeyReplacer",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "3f4449054d043e278c83a837648d882823a0a3c7",
+        "subject": "Sub inerits from automaticEnvApplied and envKeyReplacer",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.New",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.Sub",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.find",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.parents",
+          "kind": "member",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0036",
+      "question": "time.Duration slice type conversion",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "c898f59d3345a8317651876020fe4eb7322a00aa",
+        "subject": "fix: time.Duration slice type conversion (#1498)",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.Get",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.find",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0037",
+      "question": "add multiple endpoints support for remote",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "0755477020c2dffa85bdf3ff0d2f4402e8c53971",
+        "subject": "feat: add multiple endpoints support for remote",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "remote/remote.go",
+          "symbol": "remote.getConfigManager",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0038",
+      "question": "feat!: drop toml v1 support",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "77fc1c3084ea7064db16816828cca7af47c04410",
+        "subject": "feat!: drop toml v1 support",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "internal/encoding/toml/codec.go",
+          "symbol": "toml.Codec.Decode",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "internal/encoding/toml/codec.go",
+          "symbol": "toml.Codec.Encode",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0039",
+      "question": "use new Has fsnotify method for event matching",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "4b8d14881e10288b24eddd0873b0c0ce4710a333",
+        "subject": "refactor: use new Has fsnotify method for event matching",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.WatchConfig",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0040",
+      "question": "Add a DebugTo convenience funtion",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "312417a0c5abe15ac04f6ac66c88caa203b44012",
+        "subject": "Add a DebugTo convenience funtion",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.Debug",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "viper.go",
+          "symbol": "viper.DebugTo",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.Debug",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.DebugTo",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0041",
+      "question": "Adds support for uint16 with `GetUint16`",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "202060b3a253bbac94795be51ca0b8e7432bf0fb",
+        "subject": "Adds support for uint16 with `GetUint16`",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.GetUint16",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.GetUint16",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0042",
+      "question": "Recurse into arrays when converting keys to lowercase",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "5247643f02358b40d01385b0dbf743b659b0133f",
+        "subject": "Recurse into arrays when converting keys to lowercase",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "util.go",
+          "symbol": "viper.insensitiveArray",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "util.go",
+          "symbol": "viper.insensitiviseMap",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "util.go",
+          "symbol": "viper.insensitiviseVal",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0043",
+      "question": "add etcd3 support to remote",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "433821fa479bdf3d712d359d566b08be4d5f7594",
+        "subject": "feat: add etcd3 support to remote",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "remote/remote.go",
+          "symbol": "remote.getConfigManager",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0044",
+      "question": "fix Error log calls in mergeMaps",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "da55858fffe6093e995244bfc0aa2d9fba370e30",
+        "subject": "chore: fix Error log calls in mergeMaps",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.mergeMaps",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0045",
+      "question": "Added test case for merging configs, where target is null, and source is not null",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "97664ba0202811082423479584cc9542c702d69a",
+        "subject": "Added test case for merging configs, where target is null, and source is not null",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.mergeMaps",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0046",
+      "question": "Allow merging configs with different types of leaf values",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "0353c6ea50f9882f0d16527e18c31653ba2d10cb",
+        "subject": "Allow merging configs with different types of leaf values",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.mergeMaps",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0047",
+      "question": "fix file find tests on windows",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "14c9dc6a5709bddfc8b8c4844268dea0634a8756",
+        "subject": "test: fix file find tests on windows",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "internal/testutil/filepath.go",
+          "symbol": "testutil",
+          "kind": "package",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "internal/testutil/filepath.go",
+          "symbol": "testutil.AbsFilePath",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0048",
+      "question": "Recognize tfvars files as hcl by default.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "b1fdc47b0d05b6af898a3d50aefd62c5825a17fe",
+        "subject": "Recognize tfvars files as hcl by default.",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.Reset",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "viper.go",
+          "symbol": "viper.SupportedExts",
+          "kind": "var",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.marshalWriter",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.unmarshalReader",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "viper.go",
+          "symbol": "viper.init",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0049",
+      "question": "fix cannot write hidden file without extension",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "fa3412d7eabaa753950dd8d724364d9e72857d4c",
+        "subject": "fix cannot write hidden file without extension (#1017)",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.writeConfig",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0050",
+      "question": "made `InConfig` process paths correctly",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "e606f7496e1ea147c5af6c0140c82010432420b8",
+        "subject": "fix: made `InConfig` process paths correctly",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.InConfig",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0051",
+      "question": "Add a proper processing for pflag.StringArray",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "bd038658992ae06c6ccf069a5b4bebe432602d0f",
+        "subject": "Add a proper processing for pflag.StringArray",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.find",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0052",
+      "question": "Fix merging a key into a nil target",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "cdb5e5976f9bb9e9ede7da170187742fc4bd7e9f",
+        "subject": "Fix merging a key into a nil target",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.mergeMaps",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0053",
+      "question": "fix INI saving panics",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "fb4eafdd9775508c450b90b1b72affeef4a68cf5",
+        "subject": "fix INI saving panics (#1075)",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.marshalWriter",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0054",
+      "question": "Added support for accessing slices",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "33bcdc91eace7e804b9dad23614a1b24cbd7f1d0",
+        "subject": "Added support for accessing slices (#861)",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.find",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.searchIndexableWithPathPrefixes",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.searchMapWithPathPrefixes",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.searchSliceWithPathPrefixes",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0055",
+      "question": "ensure BindPFlag() detects a nil flag parameter before wrapping in pflagValue.",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "a0285163e1cf3c4d02a817aa1ed1d4cffc7e0a37",
+        "subject": "ensure BindPFlag() detects a nil flag parameter before wrapping in pflagValue.",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.BindPFlag",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0056",
+      "question": "Simplify $HOME prefix check",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "3826be313591f83193f048520482a7b3cf17d506",
+        "subject": "Simplify $HOME prefix check",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "util.go",
+          "symbol": "viper.absPathify",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0057",
+      "question": "Fix environment variable expansion in absPathify",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "ce534045f9aced17db5c844ccbb7c9348e716827",
+        "subject": "Fix environment variable expansion in absPathify",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "util.go",
+          "symbol": "viper.absPathify",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0058",
+      "question": "Skipping error != nil checks in favor of the fast return.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "13494e8047bb3f4c39087dfce593dfc3a5d02260",
+        "subject": "Skipping error != nil checks in favor of the fast return.",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.Unmarshal",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.UnmarshalExact",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.UnmarshalKey",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0059",
+      "question": "Getting the value of a StringToString pflag",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "3856c05f99260a778852dc112cdfc3ea3f0e1a9e",
+        "subject": "Fix: Getting the value of a StringToString pflag (#874)",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.find",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "viper.go",
+          "symbol": "viper.stringToStringConv",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0060",
+      "question": "Add support to save file with no extension",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "97ee7adfef4882d78c0ef26e22a0c8a7a8bf6776",
+        "subject": "Add support to save file with no extension (#813)",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.writeConfig",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0061",
+      "question": "changed github.com/xordataexchange/crypt to github.com/bketelsen/crypt.",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "502400c0d97d71d9c21ad9171ac0a8b0a73126aa",
+        "subject": "changed github.com/xordataexchange/crypt to github.com/bketelsen/crypt.",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "remote/remote.go",
+          "symbol": "crypt",
+          "kind": "packageName",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0062",
+      "question": "Add decoder opts to unmarshal exact",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "5ad4bc05cf581ee54efd78c7fd58202609d10857",
+        "subject": "Add decoder opts to unmarshal exact",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.UnmarshalExact",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.UnmarshalExact",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0063",
+      "question": "Add global UnmarshalExact method",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "bcb420b705de7762472dda0861823d053d7f4cbd",
+        "subject": "Add global UnmarshalExact method",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.UnmarshalExact",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0064",
+      "question": "Add string replacer interface and env key replacer option",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "4ad4c8df70ec1bed8329e5d986f09d34f66200b4",
+        "subject": "Add string replacer interface and env key replacer option",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.EnvKeyReplacer",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "viper.go",
+          "symbol": "viper.StringReplacer",
+          "kind": "interface",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "viper.go",
+          "symbol": "viper.StringReplacer.Replace",
+          "kind": "methodSpec",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.envKeyReplacer",
+          "kind": "member",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0065",
+      "question": "loop through ini sections",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "351bfe9719e59c39c308342edbf087a6cb65f30b",
+        "subject": "loop through ini sections",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.Reset",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "viper.go",
+          "symbol": "viper.SupportedExts",
+          "kind": "var",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.marshalWriter",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.unmarshalReader",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0066",
+      "question": "Review updates to utilize afero for file checks and updated checks on unit tests",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "3a19b6e0d99b8272ed919058bfbba07730296dad",
+        "subject": "Review updates to utilize afero for file checks and updated checks on unit tests",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.SafeWriteConfig",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.SafeWriteConfigAs",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0067",
+      "question": "find() looks for flag's default values only when requested.",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "9e353e395e9f619d63334d59bfacdd987e701431",
+        "subject": "find() looks for flag's default values only when requested.",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.Get",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.IsSet",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.find",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0068",
+      "question": "Added capacity to slice creation",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "72b022eb357a56469725dcd03918449e2278d02e",
+        "subject": "Added capacity to slice creation",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.AllKeys",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0069",
+      "question": "remote: fix two dropped errors",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "583f79b3ea0db3590b23667b3130094ca14c1dac",
+        "subject": "remote: fix two dropped errors",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "remote/remote.go",
+          "symbol": "remote.getConfigManager",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0070",
+      "question": "Fixed missing f.Close() in writeConfig()",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "e02bc9eca55d5fc66221bc0aeeaaa77410603914",
+        "subject": "Fixed missing f.Close() in writeConfig()",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.writeConfig",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0071",
+      "question": "Add missing call to initWF.Done()",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "e325492b82e97dec8208f8a2362ee9efe9023261",
+        "subject": "Add missing call to initWF.Done()",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.WatchConfig",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0072",
+      "question": "Add GetIntSlice helper method",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "b8221cf4ee9174f124f60bdcf24944da0b0b5643",
+        "subject": "Add GetIntSlice helper method",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.GetIntSlice",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.GetIntSlice",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0073",
+      "question": "Add support for int slice flags",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "ad5ed02fa46d33a367ae1e563a3579f1a42e867e",
+        "subject": "Add support for int slice flags  (#637)",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.Get",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.find",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0074",
+      "question": "Support `.env` format files",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "3620d3d9e17742adf7d8e5503abbe515533a9786",
+        "subject": " Support `.env` format files (#528)",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.Reset",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "viper.go",
+          "symbol": "viper.SupportedExts",
+          "kind": "var",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.marshalWriter",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.unmarshalReader",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0075",
+      "question": "Make the map in MergeConfigMap case insensitive",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "6d33b5a963d922d182c91e8a1c88d81fd150cfd4",
+        "subject": "Make the map in MergeConfigMap case insensitive",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.MergeConfigMap",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0076",
+      "question": "Fix nil pointer on watch function",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "2c12c60302a5a0e62ee102ca9bc996277c2f64f5",
+        "subject": "Fix nil pointer on watch function (#568)",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.WatchConfig",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0077",
+      "question": "Fix overflow error on 32 bit architectures",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "0ac2068de99fd349edc4954d0e9b4a600d75da44",
+        "subject": "Fix overflow error on 32 bit architectures (#340)",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.Get",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0078",
+      "question": "refactor test to avoid negative counter on WG",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "41f829b2c9ecf78bcc45a9c18cd9afe1051d86a5",
+        "subject": "refactor test to avoid negative counter on WG",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.WatchConfig",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0079",
+      "question": "Refactor with WaitGroup and check channel is open",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "242f4890f5f6239217fa5c45bb6de3b4b5509d3b",
+        "subject": "Refactor with WaitGroup and check channel is open",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.WatchConfig",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0080",
+      "question": "WatchConfig and Kubernetes",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "e0f7631cf3ac7e7530949c7e154855076b0a4c17",
+        "subject": "WatchConfig and Kubernetes (#284)",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.WatchConfig",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0081",
+      "question": "Run gofmt on all existing code",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "8ac2e2e20f3d24e5b3b85ae0fcd11bdb0caf0f15",
+        "subject": "Run gofmt on all existing code",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "remote/remote.go",
+          "symbol": "remote.remoteConfigProvider.Watch",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "remote/remote.go",
+          "symbol": "remote.remoteConfigProvider.WatchChannel",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0082",
+      "question": "Properly handle string slice values",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "0967fc9aceab2ce9da34061253ac10fb99bba5b2",
+        "subject": "Properly handle string slice values",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.find",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "viper.go",
+          "symbol": "viper.readAsCSV",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0083",
+      "question": "Fix UnmarshalKey handling of time.Duration",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "5d46e70da8c0b6f812e0b170b7a985753b5c63cb",
+        "subject": "Fix UnmarshalKey handling of time.Duration",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.UnmarshalKey",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0084",
+      "question": "Only save config on success in ReadInConfig",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "d90f2bb139e1c12fa276ee449cd68e8c6c5c1602",
+        "subject": "Only save config on success in ReadInConfig",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.ReadInConfig",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0085",
+      "question": "Fix MergeInConfig error return",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "5ed0fc31f7f453625df314d8e66b9791e8d13003",
+        "subject": "Fix MergeInConfig error return",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.MergeInConfig",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0086",
+      "question": "Copy and insensitivise maps in Set",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "80ab6657f9ec7e5761f6603320d3d58dfe6970f6",
+        "subject": "Copy and insensitivise maps in Set",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "util.go",
+          "symbol": "viper.copyAndInsensitiviseMap",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "util.go",
+          "symbol": "viper.toCaseInsensitiveValue",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.Set",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.SetDefault",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0087",
+      "question": "Fixed AllKeys() to include env values added with BindEnv()",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "285f1510193473600929e1183915f6220fabab94",
+        "subject": "Fixed AllKeys() to include env values added with BindEnv()",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.AllKeys",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.mergeFlatMap",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "viper.go",
+          "symbol": "viper.castMapFlagToMapInterface",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0088",
+      "question": "Increase performance of nested keys search",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "50515b700e02658272117a72bd641b6b7f1222e5",
+        "subject": "Increase performance of nested keys search",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "util.go",
+          "symbol": "viper.insensitiviseMap",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.Get",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.find",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.searchMap",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.searchMapWithPathPrefixes",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0089",
+      "question": "Allow errors to propagate from getConfigFile().",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "44208030b391907a5ec5c5658470bdb6e6169073",
+        "subject": "Allow errors to propagate from getConfigFile(). (#161)",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.MergeInConfig",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.ReadInConfig",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.WatchConfig",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.getConfigFile",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.getConfigType",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0090",
+      "question": "Check for nil in viper.Sub",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "670c42a85b2a2215949acd943cb8f11add317e3f",
+        "subject": "Check for nil in viper.Sub",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.Sub",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0091",
+      "question": "Remove expensive TRACE logging",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "382f87b929b84ce13e9c8a375a4b217f224e6c65",
+        "subject": "Remove expensive TRACE logging",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.Get",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0092",
+      "question": "Fix retrieval of pflag stringSlice",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "ed0a9674c6ef3646e218d8bb70708d250e94354b",
+        "subject": "Fix retrieval of pflag stringSlice (#240)",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.find",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0093",
+      "question": "Prevent shadowning of keys when a nested key's value is nil.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "2f6a41490bc86fa9a8fb2fc03526a5795e904a17",
+        "subject": "Prevent shadowning of keys when a nested key's value is nil.",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.find",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0094",
+      "question": "Add getter for global Viper",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "346299ea79e446ebdddb834371ceba2e5926b732",
+        "subject": "Add getter for global Viper",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.GetViper",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0095",
+      "question": "Reset cache on config name change",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "5619c0edbec91139df79dd0d0d8d4967f4646a08",
+        "subject": "Reset cache on config name change",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.SetConfigName",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0096",
+      "question": "Remove kr/pretty dependency",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "a0cdbddebd2b4e614f360b2220f32055d1afe7dd",
+        "subject": "Remove kr/pretty dependency",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.Debug",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0097",
+      "question": "use aliases in all keys list to enable proper Unmarshaling",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "e072d51737b175ac83688b04999b509edc7908e0",
+        "subject": "use aliases in all keys list to enable proper Unmarshaling",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.AllKeys",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0098",
+      "question": "Watch the entire config dir for changes",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "a212099cbe6fbe8d07476bfda8d2d39b6ff8f325",
+        "subject": "Watch the entire config dir for changes",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.WatchConfig",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0099",
+      "question": "Handle the case Get() returns either map[interface{}]interface{} or map[string]interface{}",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "0c82789feb03da74b3390a5d64b8ce2ce9ba0f3e",
+        "subject": "Handle the case Get() returns either map[interface{}]interface{} or map[string]interface{}",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.Sub",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0100",
+      "question": "Bugfix for Nested Key Casing",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "110492b3001269a0777997fcbe68a60828fac4cb",
+        "subject": "Bugfix for Nested Key Casing",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.Get",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.searchMap",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0101",
+      "question": "Add Sub() for Viper, which returns a branch of a Viper instance.",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "105e3d0d193906ace416cc994664dbce23dbe1db",
+        "subject": "Add Sub() for Viper, which returns a branch of a Viper instance.",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.Sub",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.Sub",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0102",
+      "question": "Refactored IsSet to examine keys",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "e3bc06f20c7a60e8042d3f8741551ce606d31c40",
+        "subject": "Refactored IsSet to examine keys",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.IsSet",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0103",
+      "question": "AllKeys() now includes bound flag and env var keys",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "c25387f10d265e6ed88fef3fe3d37bc757124983",
+        "subject": "AllKeys() now includes bound flag and env var keys",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.AllKeys",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0104",
+      "question": "Flag Binding Refactor",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "c374c6d0a933b8276ebf73d392c21f9166586f3a",
+        "subject": "Flag Binding Refactor",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.BindPFlags",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.Get",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.find",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0105",
+      "question": "Fixed #115: Added code in the find method to search for nested configuration parameters",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "87b94ba48604b6be709dc242d0261f3723384b74",
+        "subject": "Fixed #115: Added code in the find method to search for nested configuration parameters",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.find",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0106",
+      "question": "fixing second slice type needed",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "09ba0a69542e17a89deef22ab2ccf130abc49960",
+        "subject": "fixing second slice type needed",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.GetStringMapStringSlice",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0107",
+      "question": "adding GetStringMapStringSlice method",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "b9316c3299b95d429c49f2f67d5ec824cd87c95e",
+        "subject": "adding GetStringMapStringSlice method",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.GetStringMapStringSlice",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.GetStringMapStringSlice",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0108",
+      "question": "Nested keys properly recurse on map[interface{}]interface{}",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "28ada1e5b0d3edf3d0402f2d425044ee9faaffc1",
+        "subject": "Nested keys properly recurse on map[interface{}]interface{}",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.searchMap",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0109",
+      "question": "replace bytes.Buffer with io.Reader",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "f3482afcd0014f4cffebd06581212c98f4ca37de",
+        "subject": "replace bytes.Buffer with io.Reader",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.ReadConfig",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.ReadConfig",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0110",
+      "question": "Recursively insensitivize the configuration structures",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "8d9577a72e57989b539c3cb7d7691673ed422af1",
+        "subject": "Recursively insensitivize the configuration structures",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "util.go",
+          "symbol": "viper.insensitiviseMap",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0111",
+      "question": "Reordered the debug dump of configs to print them in order of precedence",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "b22fa2b43961777c9c063da23535489fe19079c6",
+        "subject": "Reordered the debug dump of configs to print them in order of precedence",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.Debug",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0112",
+      "question": "Added accessing deep keys by recursive hierarchical search",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "c174e2427c1891ac084814d40c9f2c64019d23f1",
+        "subject": "Added accessing deep keys by recursive hierarchical search",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.New",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper",
+          "kind": "struct",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.Get",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.keyDelim",
+          "kind": "member",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.searchMap",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0113",
+      "question": "Clean config register before reading in from file in order to avoid stale values",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "54e585af54185064cfed336e8be399ba2de11304",
+        "subject": "Clean config register before reading in from file in order to avoid stale values",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.ReadInConfig",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0114",
+      "question": "Current working directory is added to the config search paths by default",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "40762f75412949b579990808c29217ed19a4b320",
+        "subject": "Current working directory is added to the config search paths by default",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.New",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0115",
+      "question": "Set default values when binding the whole flagset",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "c861bdefb7e99feac876a9c3c7673e73f634842d",
+        "subject": "Set default values when binding the whole flagset",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.BindPFlags",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0116",
+      "question": "Added the pflags register to the debug output",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "19ed4964729b5043983925262fe74100ebfece0f",
+        "subject": "Added the pflags register to the debug output",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.Debug",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0117",
+      "question": "Added BindPFlags function which binds all flags in a given flag set to the pflags register",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "24dd877ad722b0649ed1c0d9a3fbf9db7e5ee4e4",
+        "subject": "Added BindPFlags function which binds all flags in a given flag set to the pflags register",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.BindPFlags",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "viper.go",
+          "symbol": "viper.Viper.BindPFlags",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0118",
+      "question": "Move viper.Reset() back to the public interface",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "90734830d1ec30c19cb03e3ecd76a43dc1618b01",
+        "subject": "Move viper.Reset() back to the public interface",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.Reset",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "go__viper__0119",
+      "question": "fixing problem with case sensitivity with keys in env and flags maps",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "1b8adf4854c1b66a685cbcbd6ebb202cb832a1b7",
+        "subject": "fixing problem with case sensitivity with keys in env and flags maps",
+        "upstream": "https://github.com/spf13/viper.git"
+      },
+      "gold": [
+        {
+          "file": "viper.go",
+          "symbol": "viper.BindEnv",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "viper.go",
+          "symbol": "viper.BindPFlag",
+          "kind": "func",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    }
+  ]
+}

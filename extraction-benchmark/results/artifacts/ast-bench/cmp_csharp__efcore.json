@@ -1,0 +1,245 @@
+{
+  "repo": "efcore",
+  "referee": "Roslyn",
+  "graphify_baseline": true,
+  "truth_counts": {
+    "files": 5761,
+    "types": 16199,
+    "methods": 74854,
+    "fields": 41205,
+    "constants": 0,
+    "parse_errors": 4
+  },
+  "entities": [
+    {
+      "entity": "methods",
+      "truth": 74854,
+      "graphify_scored": true,
+      "kora": {
+        "found": 74991,
+        "matched": 74668,
+        "missed": 186,
+        "extra": 323,
+        "recall": 99.8,
+        "precision": 99.6
+      },
+      "graphify": {
+        "found": 57736,
+        "matched": 57696,
+        "missed": 17158,
+        "extra": 40,
+        "recall": 77.1,
+        "precision": 99.9
+      }
+    },
+    {
+      "entity": "types",
+      "truth": 16199,
+      "graphify_scored": false,
+      "kora": {
+        "found": 16200,
+        "matched": 16199,
+        "missed": 0,
+        "extra": 1,
+        "recall": 100.0,
+        "precision": 100.0
+      },
+      "graphify": {
+        "found": 0,
+        "matched": 0,
+        "missed": 16199,
+        "extra": 0,
+        "recall": 0.0,
+        "precision": 0.0
+      }
+    },
+    {
+      "entity": "constants",
+      "truth": 0,
+      "graphify_scored": false,
+      "kora": {
+        "found": 0,
+        "matched": 0,
+        "missed": 0,
+        "extra": 0,
+        "recall": 0.0,
+        "precision": 0.0
+      },
+      "graphify": {
+        "found": 0,
+        "matched": 0,
+        "missed": 0,
+        "extra": 0,
+        "recall": 0.0,
+        "precision": 0.0
+      }
+    },
+    {
+      "entity": "types+constants",
+      "truth": 16199,
+      "graphify_scored": true,
+      "kora": {
+        "found": 16200,
+        "matched": 16199,
+        "missed": 0,
+        "extra": 1,
+        "recall": 100.0,
+        "precision": 100.0
+      },
+      "graphify": {
+        "found": 14735,
+        "matched": 14735,
+        "missed": 1464,
+        "extra": 0,
+        "recall": 91.0,
+        "precision": 100.0
+      }
+    },
+    {
+      "entity": "fields",
+      "truth": 41205,
+      "graphify_scored": false,
+      "kora": {
+        "found": 41601,
+        "matched": 41122,
+        "missed": 83,
+        "extra": 479,
+        "recall": 99.8,
+        "precision": 98.8
+      },
+      "graphify": {
+        "found": 0,
+        "matched": 0,
+        "missed": 41205,
+        "extra": 0,
+        "recall": 0.0,
+        "precision": 0.0
+      }
+    }
+  ],
+  "kora_recall_by_kind": [
+    {
+      "plane": "types",
+      "kind": "class",
+      "truth": 14972,
+      "kora_recall": 100.0
+    },
+    {
+      "plane": "types",
+      "kind": "delegate",
+      "truth": 6,
+      "kora_recall": 100.0
+    },
+    {
+      "plane": "types",
+      "kind": "enum",
+      "truth": 231,
+      "kora_recall": 100.0
+    },
+    {
+      "plane": "types",
+      "kind": "interface",
+      "truth": 651,
+      "kora_recall": 100.0
+    },
+    {
+      "plane": "types",
+      "kind": "record",
+      "truth": 172,
+      "kora_recall": 100.0
+    },
+    {
+      "plane": "types",
+      "kind": "struct",
+      "truth": 167,
+      "kora_recall": 100.0
+    },
+    {
+      "plane": "methods",
+      "kind": "constructor",
+      "truth": 3103,
+      "kora_recall": 100.0
+    },
+    {
+      "plane": "methods",
+      "kind": "local_function",
+      "truth": 758,
+      "kora_recall": 99.9
+    },
+    {
+      "plane": "methods",
+      "kind": "method",
+      "truth": 70933,
+      "kora_recall": 99.7
+    },
+    {
+      "plane": "methods",
+      "kind": "operator",
+      "truth": 60,
+      "kora_recall": 98.3
+    },
+    {
+      "plane": "fields",
+      "kind": "enum_member",
+      "truth": 953,
+      "kora_recall": 98.7
+    },
+    {
+      "plane": "fields",
+      "kind": "event",
+      "truth": 74,
+      "kora_recall": 100.0
+    },
+    {
+      "plane": "fields",
+      "kind": "field",
+      "truth": 7724,
+      "kora_recall": 99.7
+    },
+    {
+      "plane": "fields",
+      "kind": "property",
+      "truth": 32355,
+      "kora_recall": 99.9
+    },
+    {
+      "plane": "fields",
+      "kind": "record_parameter",
+      "truth": 99,
+      "kora_recall": 99.0
+    }
+  ],
+  "extractor_planes": {
+    "treesitter": 127807,
+    "regex": 5418
+  },
+  "graphify_nodes_landing_on_a_truth_field": 680,
+  "graphify_field_hits_that_collide_with_a_method_or_type": 680,
+  "preprocessor_disabled_nodes_excluded": 35,
+  "comment_planes": {
+    "kora_rationale": 398,
+    "kora_doc_ref": 0,
+    "graphify_rationale": 0,
+    "graphify_doc_ref": 0
+  },
+  "method_line_accuracy_within_2": {
+    "kora": "99.6% (74391/74671)",
+    "graphify": "100.0% (57695/57696)"
+  },
+  "span_end_line_coverage": {
+    "kora": "100.0% (133187/133190)",
+    "graphify": "0% \u2014 source_location is a start line only, no end"
+  },
+  "call_sites": {
+    "kora_total": 425943,
+    "kora_with_receiver": 336417,
+    "kora_qualified_pct": 79.0
+  },
+  "node_totals": {
+    "kora_java": 133190,
+    "graphify_java_all_files": 106337
+  },
+  "extract_ms": {
+    "kora": 22197
+  }
+}

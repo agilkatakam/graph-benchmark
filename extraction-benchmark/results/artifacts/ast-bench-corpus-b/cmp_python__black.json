@@ -1,0 +1,190 @@
+{
+  "repo": "black",
+  "referee": "CPython ast",
+  "graphify_baseline": true,
+  "truth_counts": {
+    "files": 347,
+    "types": 455,
+    "methods": 2577,
+    "fields": 531,
+    "constants": 1772,
+    "parse_errors": 10
+  },
+  "entities": [
+    {
+      "entity": "methods",
+      "truth": 2577,
+      "graphify_scored": true,
+      "kora": {
+        "found": 2606,
+        "matched": 2571,
+        "missed": 6,
+        "extra": 35,
+        "recall": 99.8,
+        "precision": 98.7
+      },
+      "graphify": {
+        "found": 1548,
+        "matched": 1536,
+        "missed": 1041,
+        "extra": 12,
+        "recall": 59.6,
+        "precision": 99.2
+      }
+    },
+    {
+      "entity": "types",
+      "truth": 455,
+      "graphify_scored": false,
+      "kora": {
+        "found": 457,
+        "matched": 455,
+        "missed": 0,
+        "extra": 2,
+        "recall": 100.0,
+        "precision": 99.6
+      },
+      "graphify": {
+        "found": 0,
+        "matched": 0,
+        "missed": 455,
+        "extra": 0,
+        "recall": 0.0,
+        "precision": 0.0
+      }
+    },
+    {
+      "entity": "constants",
+      "truth": 1771,
+      "graphify_scored": false,
+      "kora": {
+        "found": 1797,
+        "matched": 1758,
+        "missed": 13,
+        "extra": 39,
+        "recall": 99.3,
+        "precision": 97.8
+      },
+      "graphify": {
+        "found": 0,
+        "matched": 0,
+        "missed": 1771,
+        "extra": 0,
+        "recall": 0.0,
+        "precision": 0.0
+      }
+    },
+    {
+      "entity": "types+constants",
+      "truth": 455,
+      "graphify_scored": true,
+      "kora": {
+        "found": 457,
+        "matched": 455,
+        "missed": 0,
+        "extra": 2,
+        "recall": 100.0,
+        "precision": 99.6
+      },
+      "graphify": {
+        "found": 244,
+        "matched": 243,
+        "missed": 212,
+        "extra": 1,
+        "recall": 53.4,
+        "precision": 99.6
+      }
+    },
+    {
+      "entity": "fields",
+      "truth": 531,
+      "graphify_scored": false,
+      "kora": {
+        "found": 531,
+        "matched": 531,
+        "missed": 0,
+        "extra": 0,
+        "recall": 100.0,
+        "precision": 100.0
+      },
+      "graphify": {
+        "found": 0,
+        "matched": 0,
+        "missed": 531,
+        "extra": 0,
+        "recall": 0.0,
+        "precision": 0.0
+      }
+    }
+  ],
+  "kora_recall_by_kind": [
+    {
+      "plane": "types",
+      "kind": "class",
+      "truth": 455,
+      "kora_recall": 100.0
+    },
+    {
+      "plane": "methods",
+      "kind": "function",
+      "truth": 2564,
+      "kora_recall": 99.8
+    },
+    {
+      "plane": "methods",
+      "kind": "lambda_fn",
+      "truth": 13,
+      "kora_recall": 84.6
+    },
+    {
+      "plane": "fields",
+      "kind": "class_attribute",
+      "truth": 411,
+      "kora_recall": 100.0
+    },
+    {
+      "plane": "fields",
+      "kind": "instance_attribute",
+      "truth": 120,
+      "kora_recall": 100.0
+    },
+    {
+      "plane": "constants",
+      "kind": "module_constant",
+      "truth": 1772,
+      "kora_recall": 99.2
+    }
+  ],
+  "extractor_planes": {
+    "treesitter": 6067
+  },
+  "graphify_nodes_landing_on_a_truth_field": 2,
+  "graphify_field_hits_that_collide_with_a_method_or_type": 2,
+  "preprocessor_disabled_nodes_excluded": 0,
+  "comment_planes": {
+    "kora_rationale": 675,
+    "kora_doc_ref": 0,
+    "graphify_rationale": 675,
+    "graphify_doc_ref": 0
+  },
+  "method_line_accuracy_within_2": {
+    "kora": "100.0% (2571/2571)",
+    "graphify": "100.0% (1536/1536)"
+  },
+  "span_end_line_coverage": {
+    "kora": "100.0% (6066/6066)",
+    "graphify": "0% \u2014 source_location is a start line only, no end"
+  },
+  "call_sites": {
+    "kora_total": 6485,
+    "kora_with_receiver": 3107,
+    "kora_qualified_pct": 47.9
+  },
+  "node_totals": {
+    "kora_java": 6066,
+    "graphify_java_all_files": 3812
+  },
+  "extract_ms": {
+    "kora": 1064
+  }
+}

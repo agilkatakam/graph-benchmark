@@ -1,0 +1,8 @@
+{
+  "name": "koragraph-benchmark-referees",
+  "private": true,
+  "description": "The TypeScript compiler is the primary referee for TypeScript and JavaScript. Its version decides truth, so it is pinned exactly — see VERSIONS.md. `npm ci` here, then run the harness. TypeScript 7 (\"tsgo\") exports no JavaScript AST API and cannot be used.",
+  "dependencies": {
+    "typescript": "5.2.2"
+  }
+}

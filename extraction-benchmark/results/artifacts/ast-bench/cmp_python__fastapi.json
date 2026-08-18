@@ -1,0 +1,184 @@
+{
+  "repo": "fastapi",
+  "referee": "CPython ast",
+  "graphify_baseline": true,
+  "truth_counts": {
+    "files": 1136,
+    "types": 692,
+    "methods": 4962,
+    "fields": 1627,
+    "constants": 1246,
+    "parse_errors": 0
+  },
+  "entities": [
+    {
+      "entity": "methods",
+      "truth": 4962,
+      "graphify_scored": true,
+      "kora": {
+        "found": 4962,
+        "matched": 4962,
+        "missed": 0,
+        "extra": 0,
+        "recall": 100.0,
+        "precision": 100.0
+      },
+      "graphify": {
+        "found": 4586,
+        "matched": 4586,
+        "missed": 376,
+        "extra": 0,
+        "recall": 92.4,
+        "precision": 100.0
+      }
+    },
+    {
+      "entity": "types",
+      "truth": 692,
+      "graphify_scored": false,
+      "kora": {
+        "found": 692,
+        "matched": 692,
+        "missed": 0,
+        "extra": 0,
+        "recall": 100.0,
+        "precision": 100.0
+      },
+      "graphify": {
+        "found": 0,
+        "matched": 0,
+        "missed": 692,
+        "extra": 0,
+        "recall": 0.0,
+        "precision": 0.0
+      }
+    },
+    {
+      "entity": "constants",
+      "truth": 1246,
+      "graphify_scored": false,
+      "kora": {
+        "found": 1246,
+        "matched": 1246,
+        "missed": 0,
+        "extra": 0,
+        "recall": 100.0,
+        "precision": 100.0
+      },
+      "graphify": {
+        "found": 0,
+        "matched": 0,
+        "missed": 1246,
+        "extra": 0,
+        "recall": 0.0,
+        "precision": 0.0
+      }
+    },
+    {
+      "entity": "types+constants",
+      "truth": 692,
+      "graphify_scored": true,
+      "kora": {
+        "found": 692,
+        "matched": 692,
+        "missed": 0,
+        "extra": 0,
+        "recall": 100.0,
+        "precision": 100.0
+      },
+      "graphify": {
+        "found": 632,
+        "matched": 632,
+        "missed": 60,
+        "extra": 0,
+        "recall": 91.3,
+        "precision": 100.0
+      }
+    },
+    {
+      "entity": "fields",
+      "truth": 1627,
+      "graphify_scored": false,
+      "kora": {
+        "found": 1627,
+        "matched": 1627,
+        "missed": 0,
+        "extra": 0,
+        "recall": 100.0,
+        "precision": 100.0
+      },
+      "graphify": {
+        "found": 0,
+        "matched": 0,
+        "missed": 1627,
+        "extra": 0,
+        "recall": 0.0,
+        "precision": 0.0
+      }
+    }
+  ],
+  "kora_recall_by_kind": [
+    {
+      "plane": "types",
+      "kind": "class",
+      "truth": 692,
+      "kora_recall": 100.0
+    },
+    {
+      "plane": "methods",
+      "kind": "function",
+      "truth": 4962,
+      "kora_recall": 100.0
+    },
+    {
+      "plane": "fields",
+      "kind": "class_attribute",
+      "truth": 1458,
+      "kora_recall": 100.0
+    },
+    {
+      "plane": "fields",
+      "kind": "instance_attribute",
+      "truth": 169,
+      "kora_recall": 100.0
+    },
+    {
+      "plane": "constants",
+      "kind": "module_constant",
+      "truth": 1246,
+      "kora_recall": 100.0
+    }
+  ],
+  "extractor_planes": {
+    "treesitter": 8744
+  },
+  "graphify_nodes_landing_on_a_truth_field": 9,
+  "graphify_field_hits_that_collide_with_a_method_or_type": 9,
+  "preprocessor_disabled_nodes_excluded": 0,
+  "comment_planes": {
+    "kora_rationale": 217,
+    "kora_doc_ref": 0,
+    "graphify_rationale": 215,
+    "graphify_doc_ref": 0
+  },
+  "method_line_accuracy_within_2": {
+    "kora": "100.0% (4962/4962)",
+    "graphify": "100.0% (4586/4586)"
+  },
+  "span_end_line_coverage": {
+    "kora": "100.0% (8744/8744)",
+    "graphify": "0% \u2014 source_location is a start line only, no end"
+  },
+  "call_sites": {
+    "kora_total": 13682,
+    "kora_with_receiver": 7354,
+    "kora_qualified_pct": 53.7
+  },
+  "node_totals": {
+    "kora_java": 8744,
+    "graphify_java_all_files": 25985
+  },
+  "extract_ms": {
+    "kora": 717
+  }
+}

@@ -1,0 +1,190 @@
+{
+  "repo": "protobuf",
+  "referee": "CPython ast",
+  "graphify_baseline": true,
+  "truth_counts": {
+    "files": 106,
+    "types": 238,
+    "methods": 2355,
+    "fields": 452,
+    "constants": 410,
+    "parse_errors": 0
+  },
+  "entities": [
+    {
+      "entity": "methods",
+      "truth": 2355,
+      "graphify_scored": true,
+      "kora": {
+        "found": 2355,
+        "matched": 2355,
+        "missed": 0,
+        "extra": 0,
+        "recall": 100.0,
+        "precision": 100.0
+      },
+      "graphify": {
+        "found": 2114,
+        "matched": 2114,
+        "missed": 241,
+        "extra": 0,
+        "recall": 89.8,
+        "precision": 100.0
+      }
+    },
+    {
+      "entity": "types",
+      "truth": 238,
+      "graphify_scored": false,
+      "kora": {
+        "found": 238,
+        "matched": 238,
+        "missed": 0,
+        "extra": 0,
+        "recall": 100.0,
+        "precision": 100.0
+      },
+      "graphify": {
+        "found": 0,
+        "matched": 0,
+        "missed": 238,
+        "extra": 0,
+        "recall": 0.0,
+        "precision": 0.0
+      }
+    },
+    {
+      "entity": "constants",
+      "truth": 410,
+      "graphify_scored": false,
+      "kora": {
+        "found": 410,
+        "matched": 410,
+        "missed": 0,
+        "extra": 0,
+        "recall": 100.0,
+        "precision": 100.0
+      },
+      "graphify": {
+        "found": 0,
+        "matched": 0,
+        "missed": 410,
+        "extra": 0,
+        "recall": 0.0,
+        "precision": 0.0
+      }
+    },
+    {
+      "entity": "types+constants",
+      "truth": 238,
+      "graphify_scored": true,
+      "kora": {
+        "found": 238,
+        "matched": 238,
+        "missed": 0,
+        "extra": 0,
+        "recall": 100.0,
+        "precision": 100.0
+      },
+      "graphify": {
+        "found": 214,
+        "matched": 214,
+        "missed": 24,
+        "extra": 0,
+        "recall": 89.9,
+        "precision": 100.0
+      }
+    },
+    {
+      "entity": "fields",
+      "truth": 452,
+      "graphify_scored": false,
+      "kora": {
+        "found": 452,
+        "matched": 452,
+        "missed": 0,
+        "extra": 0,
+        "recall": 100.0,
+        "precision": 100.0
+      },
+      "graphify": {
+        "found": 0,
+        "matched": 0,
+        "missed": 452,
+        "extra": 0,
+        "recall": 0.0,
+        "precision": 0.0
+      }
+    }
+  ],
+  "kora_recall_by_kind": [
+    {
+      "plane": "types",
+      "kind": "class",
+      "truth": 238,
+      "kora_recall": 100.0
+    },
+    {
+      "plane": "methods",
+      "kind": "function",
+      "truth": 2354,
+      "kora_recall": 100.0
+    },
+    {
+      "plane": "methods",
+      "kind": "lambda_fn",
+      "truth": 1,
+      "kora_recall": 100.0
+    },
+    {
+      "plane": "fields",
+      "kind": "class_attribute",
+      "truth": 116,
+      "kora_recall": 100.0
+    },
+    {
+      "plane": "fields",
+      "kind": "instance_attribute",
+      "truth": 336,
+      "kora_recall": 100.0
+    },
+    {
+      "plane": "constants",
+      "kind": "module_constant",
+      "truth": 410,
+      "kora_recall": 100.0
+    }
+  ],
+  "extractor_planes": {
+    "treesitter": 4195
+  },
+  "graphify_nodes_landing_on_a_truth_field": 1,
+  "graphify_field_hits_that_collide_with_a_method_or_type": 1,
+  "preprocessor_disabled_nodes_excluded": 0,
+  "comment_planes": {
+    "kora_rationale": 740,
+    "kora_doc_ref": 0,
+    "graphify_rationale": 723,
+    "graphify_doc_ref": 0
+  },
+  "method_line_accuracy_within_2": {
+    "kora": "100.0% (2355/2355)",
+    "graphify": "100.0% (2114/2114)"
+  },
+  "span_end_line_coverage": {
+    "kora": "100.0% (4195/4195)",
+    "graphify": "0% \u2014 source_location is a start line only, no end"
+  },
+  "call_sites": {
+    "kora_total": 15165,
+    "kora_with_receiver": 12193,
+    "kora_qualified_pct": 80.4
+  },
+  "node_totals": {
+    "kora_java": 4195,
+    "graphify_java_all_files": 81363
+  },
+  "extract_ms": {
+    "kora": 377
+  }
+}

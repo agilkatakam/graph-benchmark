@@ -1,0 +1,3219 @@
+{
+  "language": "java",
+  "repo": "commons-cli",
+  "pinned_sha": "1aaa321944c398da78b30c8e42e10a299a131f64",
+  "upstream": "https://github.com/apache/commons-cli.git",
+  "locator": {
+    "tool": "universal-ctags",
+    "version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team",
+    "args": "--fields=+neKzS --extras=+q --output-format=json"
+  },
+  "filters": {
+    "target": 120,
+    "scan_depth": 6000,
+    "min_subject_chars": 20,
+    "max_gold_decls": 5,
+    "no_merges": true,
+    "non_source_pattern": "(^|/)(test|tests|spec|specs|__tests__|testdata|fixtures|examples?|samples?|docs?|doc|website|benchmarks?|vendor|third_party|node_modules)(/|$)|(^|/)[^/]*[._-](test|spec)s?\\.[^/]+$|(^|/)test_[^/]+$",
+    "noise_subject_pattern": "^\\s*(merge\\b|revert\\b|bump\\b|release\\b|version\\b|prepare\\b|\\[maven-release-plugin\\]|update (changelog|copyright|license|readme|deps|dependencies)\\b|chore\\(deps\\)|build\\(deps\\))",
+    "process_subject_pattern": "^\\s*(apply|address|incorporate|implement)\\s+(review|reviewer|pr|code[- ]review|feedback|comments?|suggestions?)\\b|^\\s*(review\\s+)?(comments?|feedback|suggestions?)\\s*$|^\\s*(fix(ed|es)?\\s+)?typos?\\b|^\\s*(code\\s+)?(cleanup|clean\\s*up|formatting|reformat|gofmt|rustfmt|lint(ing)?|style)\\b|^\\s*(minor|small|misc(ellaneous)?|various)\\s+(fix(es)?|change(s)?|update(s)?|cleanup)\\b|^\\s*(wip|nit|nits|rebase|squash|amend)\\b|^\\s*(add|update)\\s+(comments?|javadoc|docstring|documentation)\\s*$"
+  },
+  "selection_stats": {
+    "scanned": 1305,
+    "noise_subject": 494,
+    "process_subject": 15,
+    "short_subject": 262,
+    "dup_subject": 22,
+    "no_source_files": 340,
+    "no_gold": 14,
+    "too_many_gold": 34,
+    "not_at_pin": 4,
+    "kept": 120
+  },
+  "questions": [
+    {
+      "id": "java__commons-cli__0000",
+      "question": "Reject UTF-16 surrogate values in Character converter",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "de0bd57bd92b261152af254907f1d129869a6acf",
+        "subject": "Reject UTF-16 surrogate values in Character converter (#438)",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/TypeHandler.java",
+          "symbol": "TypeHandler.putDefaultMap",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0001",
+      "question": "Fix integer overflow in TextHelpAppendable.indexOfWrap",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "dc69e8423b163da5fca292e2bf9d6482ec6202f0",
+        "subject": "Fix integer overflow in TextHelpAppendable.indexOfWrap (#437)",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/help/TextHelpAppendable.java",
+          "symbol": "TextHelpAppendable.indexOfWrap",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0002",
+      "question": "Reject trailing text after the date in Converter.DATE",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "7d77ecce8b11763b7282d6b40dffdb4ce8e85668",
+        "subject": "Reject trailing text after the date in Converter.DATE (#435)",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/Converter.java",
+          "symbol": "Converter.DATE",
+          "kind": "field",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0003",
+      "question": "Refactor stream processing",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "4dec263d684f03065bee21efe477d2bb33134cf0",
+        "subject": "Refactor stream processing",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/Options.java",
+          "symbol": "Options.getMatchingOptions",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0004",
+      "question": "Reject an empty option name in getMatchingOptions (#434).",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "c9ffd67e1d6185fdfb833a6b08b265235cef6817",
+        "subject": "Reject an empty option name in getMatchingOptions (#434).",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/Options.java",
+          "symbol": "Options",
+          "kind": "class",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0005",
+      "question": "Reject an empty option name in getMatchingOptions",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "db57942a6a593ebf2be28172a22a2f1db6bdccb9",
+        "subject": "Reject an empty option name in getMatchingOptions (#434)",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/Options.java",
+          "symbol": "Options",
+          "kind": "class",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/Options.java",
+          "symbol": "Options.getMatchingOptions",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0006",
+      "question": "Extract into final local variable.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "2fb8cb4e807932f0d28a49622239489501a6d550",
+        "subject": "Extract into final local variable.",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/help/Util.java",
+          "symbol": "Util.indexOfNonWhitespace",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0007",
+      "question": "reject invalid dates in Converter.DATE",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "8010193eec848982cb4618a0a31487aca76851a2",
+        "subject": "reject invalid dates in Converter.DATE (#430)",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/Converter.java",
+          "symbol": "Converter.DATE",
+          "kind": "field",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0008",
+      "question": "reject non-BMP code points in the Character type converter",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "f92c4ce0f80fd09b648a9b73b6495417eb97edbf",
+        "subject": "reject non-BMP code points in the Character type converter (#425)",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/TypeHandler.java",
+          "symbol": "TypeHandler.putDefaultMap",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0009",
+      "question": "Use Locale.ENGLISH when parsing dates in Converter.DATE",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "f3ba9c9518edf3702a8d06d211a91959611ff413",
+        "subject": "Use Locale.ENGLISH when parsing dates in Converter.DATE (#426)",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/Converter.java",
+          "symbol": "Converter.DATE",
+          "kind": "field",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0010",
+      "question": "Fix Javadoc reference",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "9f540c10e793563b854da5fa4208338041dc9ff8",
+        "subject": "Fix Javadoc reference",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/Converter.java",
+          "symbol": "Converter",
+          "kind": "interface",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0011",
+      "question": "Fix broken Javadoc links, replace deprecated methods in usage examples, and add a missing method to HelpFormatter",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "5fa27caa82890f508d60af8860290df53b5a34bb",
+        "subject": "Fix broken Javadoc links, replace deprecated methods in usage examples, and add a missing method to HelpFormatter (#424)",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/help/AbstractHelpFormatter.java",
+          "symbol": "AbstractHelpFormatter",
+          "kind": "class",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/help/AbstractHelpFormatter.java",
+          "symbol": "AbstractHelpFormatter.printHelp",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0012",
+      "question": "Internal refactoring",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "ca6d3362c46ef0f94bc10d92efaae8d3c93efc42",
+        "subject": "Internal refactoring",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/help/HelpFormatter.java",
+          "symbol": "HelpFormatter",
+          "kind": "class",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/help/HelpFormatter.java",
+          "symbol": "HelpFormatter.LABEL_DESCRIPTION",
+          "kind": "field",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/help/HelpFormatter.java",
+          "symbol": "HelpFormatter.LABEL_OPTIONS",
+          "kind": "field",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/help/HelpFormatter.java",
+          "symbol": "HelpFormatter.LABEL_SINCE",
+          "kind": "field",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/help/HelpFormatter.java",
+          "symbol": "HelpFormatter.getTableDefinition",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0013",
+      "question": "Add TODO comments for 2.0",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "96a18801b01b4bd85af0a4011c34cc28e9db7db4",
+        "subject": "Add TODO comments for 2.0",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/help/TextHelpAppendable.java",
+          "symbol": "TextHelpAppendable.setIndent",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/help/TextHelpAppendable.java",
+          "symbol": "TextHelpAppendable.setLeftPad",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/help/TextHelpAppendable.java",
+          "symbol": "TextHelpAppendable.setMaxWidth",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0014",
+      "question": "[Javadoc] Fix Checkstyle error",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "8ba7c15efb8bd90fe8e3b01635741335adb88c3b",
+        "subject": "[Javadoc] Fix Checkstyle error",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/OptionValidator.java",
+          "symbol": "OptionValidator",
+          "kind": "class",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0015",
+      "question": "Javadoc: The @deprecated tag should be last.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "83dc2043aa8a9215981ae8ac1428f9d706fa56ea",
+        "subject": "Javadoc: The @deprecated tag should be last.",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/CommandLine.java",
+          "symbol": "CommandLine",
+          "kind": "class",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0016",
+      "question": "Javadoc: Fix double the",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "ab0ff340bf3d5fcfc89fd108e440901445b52dcc",
+        "subject": "Javadoc: Fix double the",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/TypeHandler.java",
+          "symbol": "TypeHandler",
+          "kind": "class",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/help/TextHelpAppendable.java",
+          "symbol": "TextHelpAppendable",
+          "kind": "class",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0017",
+      "question": "Fix malformed Javadoc comments",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "a6526104cc68f0bddc3014ca6beb084353714bd1",
+        "subject": "Fix malformed Javadoc comments",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/help/TextHelpAppendable.java",
+          "symbol": "TextHelpAppendable",
+          "kind": "class",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0018",
+      "question": "Use ternary to reduce duplication",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "234a34d61dc11a302358c92fd18ed702327c5e39",
+        "subject": "Use ternary to reduce duplication",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/CommandLine.java",
+          "symbol": "CommandLine.processPropertiesFromValues",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0019",
+      "question": "Use forEachRemaining",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "7199a701924f0ecf95d729095bc610d6434a3a77",
+        "subject": "Use forEachRemaining",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/PosixParser.java",
+          "symbol": "PosixParser",
+          "kind": "class",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/PosixParser.java",
+          "symbol": "PosixParser.addRemaining",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/PosixParser.java",
+          "symbol": "PosixParser.flatten",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0020",
+      "question": "Better exception message",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "395346c58f510fcff79893d0adeb9961ab430a43",
+        "subject": "Better exception message",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/OptionBuilder.java",
+          "symbol": "OptionBuilder.create",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0021",
+      "question": "Restore method order",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "ded2696f29a6ad3416c2da81163874a5b322a7c9",
+        "subject": "Restore method order",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/help/AbstractHelpFormatter.java",
+          "symbol": "AbstractHelpFormatter",
+          "kind": "class",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/help/AbstractHelpFormatter.java",
+          "symbol": "AbstractHelpFormatter.printHelp",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0022",
+      "question": "Fix issue with groups not being reported in help output.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "d4cead7973eedc6f892f9c98ee3e3c1d16f88151",
+        "subject": "Fix issue with groups not being reported in help output. (#411)",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/help/AbstractHelpFormatter.java",
+          "symbol": "AbstractHelpFormatter",
+          "kind": "class",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/help/AbstractHelpFormatter.java",
+          "symbol": "AbstractHelpFormatter.printHelp",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0023",
+      "question": "Use Stream.findFirst()",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "b2948a6af7a51a5c0da721c8b46044ae50606864",
+        "subject": "Use Stream.findFirst()",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/CommandLine.java",
+          "symbol": "CommandLine.resolveOption",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0024",
+      "question": "add option counting functions",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "f6c45f8f46217c9eec2b398fb10a5c60b3ed8c46",
+        "subject": "feat: add option counting functions (#396)",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/CommandLine.java",
+          "symbol": "CommandLine",
+          "kind": "class",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/CommandLine.java",
+          "symbol": "CommandLine.getOptionCount",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0025",
+      "question": "Move validation to constructor",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "543bf4a5dd29b32438489e72ba9f1fd142fbb36f",
+        "subject": "Move validation to constructor",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/Option.java",
+          "symbol": "Option",
+          "kind": "class",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/Option.java",
+          "symbol": "Option.Option",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0026",
+      "question": "org.apache.commons.cli.OptionBuilder.create() should throw IllegalStateException instead of IllegalArgumentException",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "a8e61aef86e5ec510a46c709ea2fd71fbf6ca490",
+        "subject": "org.apache.commons.cli.OptionBuilder.create() should throw IllegalStateException instead of IllegalArgumentException",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/OptionBuilder.java",
+          "symbol": "OptionBuilder.create",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0027",
+      "question": "org.apache.commons.cli.Option.processValue(String) should throw IllegalStateException instead of IllegalArgumentException",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "62381649140baadc331a814bd12d301afef02e37",
+        "subject": "org.apache.commons.cli.Option.processValue(String) should throw IllegalStateException instead of IllegalArgumentException",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/Option.java",
+          "symbol": "Option.processValue",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0028",
+      "question": "org.apache.commons.cli.Option.Builder.get() should throw IllegalStateException instead of IllegalArgumentException",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "91f3acf591848ee4803526d820834dc2988f4c2a",
+        "subject": "org.apache.commons.cli.Option.Builder.get() should throw IllegalStateException instead of IllegalArgumentException",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/Option.java",
+          "symbol": "Option.Builder",
+          "kind": "class",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/Option.java",
+          "symbol": "Option.Builder.get",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/Option.java",
+          "symbol": "Option.addValue",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0029",
+      "question": "[CLI-347] Options.addOptionGroup(OptionGroup) does not remove required options from requiredOpts list",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "42be7926be5599342a812c170b03ab73f8cbb35c",
+        "subject": "[CLI-347] Options.addOptionGroup(OptionGroup) does not remove required options from requiredOpts list",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/Options.java",
+          "symbol": "Options.addOptionGroup",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0030",
+      "question": "Simplify and test MissingOptionException message construction",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "50b149a00b89d846897bb30645534fb599584e6c",
+        "subject": "Simplify and test MissingOptionException message construction",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/MissingOptionException.java",
+          "symbol": "MissingOptionException",
+          "kind": "class",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/MissingOptionException.java",
+          "symbol": "MissingOptionException.createMessage",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0031",
+      "question": "[CLI-333] org.apache.commons.cli.Option.Builder implements Supplier<Option>",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "c9698e622f3e0d2fe1d304056b28c24ff7d02e81",
+        "subject": "[CLI-333] org.apache.commons.cli.Option.Builder implements Supplier<Option>",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/Option.java",
+          "symbol": "Option.Builder",
+          "kind": "class",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/Option.java",
+          "symbol": "Option.Builder.build",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/Option.java",
+          "symbol": "Option.Builder.get",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/PatternOptionBuilder.java",
+          "symbol": "PatternOptionBuilder.parsePattern",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0032",
+      "question": "[CLI-344] Option.processValue() throws NullPointerException when passed null value with value separator configured",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "4e0cdd0f96762df26e6335be8a1ab1afd55234f1",
+        "subject": "[CLI-344] Option.processValue() throws NullPointerException when passed null value with value separator configured",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/Option.java",
+          "symbol": "Option.processValue",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0033",
+      "question": "[CLI-349] DefaultParser.parse() throws NullPointerException when options parameter is null",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "ff678b0ac3019e621d23b2eb2230096206baae78",
+        "subject": "[CLI-349] DefaultParser.parse() throws NullPointerException when options parameter is null",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/DefaultParser.java",
+          "symbol": "DefaultParser.parse",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0034",
+      "question": "[CLI-341] HelpFormatter infinite loop with 0 width input",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "bce0f6a9899830eaa5161ea6fd2af04d5679257b",
+        "subject": "[CLI-341] HelpFormatter infinite loop with 0 width input",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/HelpFormatter.java",
+          "symbol": "HelpFormatter.appendWrappedText",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0035",
+      "question": "Javadoc @since tag should be after @return and @throws",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "f001b48fa2b8fd89051197f3fdbbcb65ea037251",
+        "subject": "Javadoc @since tag should be after @return and @throws",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/help/OptionFormatter.java",
+          "symbol": "OptionFormatter.Builder",
+          "kind": "class",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0036",
+      "question": "Comment: Remove unnecessary Latin acronym",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "aef6bec7440373d4b98c186825685a5236441030",
+        "subject": "Comment: Remove unnecessary Latin acronym",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/Options.java",
+          "symbol": "Options",
+          "kind": "class",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0037",
+      "question": "Deprecate PatternOptionBuilder.PatternOptionBuilder()",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "1d76328faeb36cfe37e72a0e274ce1a36020d320",
+        "subject": "Deprecate PatternOptionBuilder.PatternOptionBuilder()",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/PatternOptionBuilder.java",
+          "symbol": "PatternOptionBuilder",
+          "kind": "class",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/PatternOptionBuilder.java",
+          "symbol": "PatternOptionBuilder.PatternOptionBuilder",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0038",
+      "question": "Javadoc: English, not Latin",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "a477af7379dfd2c0f40cc85fb3dcfb1d21b9b6c4",
+        "subject": "Javadoc: English, not Latin",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/GnuParser.java",
+          "symbol": "GnuParser",
+          "kind": "class",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/help/TextHelpAppendable.java",
+          "symbol": "TextHelpAppendable",
+          "kind": "class",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0039",
+      "question": "Whitespace before Javadoc",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "d7afc20de398ab72404fa41710cd2e31841ba064",
+        "subject": "Whitespace before Javadoc",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/HelpFormatter.java",
+          "symbol": "HelpFormatter",
+          "kind": "class",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0040",
+      "question": "Generics for Converter should use Exception not Throwable",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "b6ca226a56734563e18626670bf35fa96971181e",
+        "subject": "Generics for Converter should use Exception not Throwable",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/CommandLine.java",
+          "symbol": "CommandLine.getParsedOptionValue",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/Converter.java",
+          "symbol": "Converter",
+          "kind": "interface",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/TypeHandler.java",
+          "symbol": "TypeHandler.createValue",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0041",
+      "question": "Better local variable name",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "79fe35b0b9054710420866f0b60774c37da9c84c",
+        "subject": "Better local variable name",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/help/AbstractHelpFormatter.java",
+          "symbol": "AbstractHelpFormatter.toSyntaxOptions",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0042",
+      "question": "Add missing @Override",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "6ce3fa3e0fd74ea60b6d663be240255e089056e3",
+        "subject": "Add missing @Override",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/DefaultParser.java",
+          "symbol": "DefaultParser.Builder",
+          "kind": "class",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0043",
+      "question": "Make org.apache.commons.cli.help.AbstractHelpFormatter.comparator final",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "ef11f175aba987b4396b14bb7518870d6b048c8d",
+        "subject": "Make org.apache.commons.cli.help.AbstractHelpFormatter.comparator final",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/help/AbstractHelpFormatter.java",
+          "symbol": "AbstractHelpFormatter.comparator",
+          "kind": "field",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0044",
+      "question": "Line length Checkstyle",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "dc625e20871a5921531f268c61801e0a9460094c",
+        "subject": "Line length Checkstyle",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/help/TextHelpAppendable.java",
+          "symbol": "TextHelpAppendable",
+          "kind": "class",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0045",
+      "question": "Normalize builder pattern",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "cc9042c28aaf00c6742c67eec10733227acaae6f",
+        "subject": "Normalize builder pattern",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/help/TextHelpAppendable.java",
+          "symbol": "TextHelpAppendable.adjustTableFormat",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/help/TextHelpAppendable.java",
+          "symbol": "TextHelpAppendable.appendTable",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/help/TextStyle.java",
+          "symbol": "TextStyle",
+          "kind": "class",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/help/TextStyle.java",
+          "symbol": "TextStyle.Builder",
+          "kind": "class",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/help/TextStyle.java",
+          "symbol": "TextStyle.Builder.setTextStyle",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0046",
+      "question": "Deprecate DeprecatedAttributes.Builder() in favor of DeprecatedAttributes.builder()",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "5ccd06757f0ffaa74a9a438b14799bfa57745e10",
+        "subject": "Deprecate DeprecatedAttributes.Builder() in favor of DeprecatedAttributes.builder()",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/DeprecatedAttributes.java",
+          "symbol": "DeprecatedAttributes.Builder",
+          "kind": "class",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/DeprecatedAttributes.java",
+          "symbol": "DeprecatedAttributes.Builder.Builder",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0047",
+      "question": "Deprecate CommandLine.Builder() in favor of CommandLine.builder()",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "af7abb3586c401e32fead7e17182f024afaf85a8",
+        "subject": "Deprecate CommandLine.Builder() in favor of CommandLine.builder()",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/CommandLine.java",
+          "symbol": "CommandLine.Builder",
+          "kind": "class",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/CommandLine.java",
+          "symbol": "CommandLine.Builder.Builder",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0048",
+      "question": "DefaultParser.Builder implements Supplier<DefaultParser>",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "49b14971cd3ce9be786004875288ef678c778488",
+        "subject": "DefaultParser.Builder implements Supplier<DefaultParser>",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/DefaultParser.java",
+          "symbol": "DefaultParser.Builder",
+          "kind": "class",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/DefaultParser.java",
+          "symbol": "DefaultParser.Builder.build",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/DefaultParser.java",
+          "symbol": "DefaultParser.Builder.get",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0049",
+      "question": "CommandLine.Builder implements Supplier<CommandLine>",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "4535fae18f5ce7747ac77c3f1cb5eaadea9fc284",
+        "subject": "CommandLine.Builder implements Supplier<CommandLine>",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/CommandLine.java",
+          "symbol": "CommandLine.Builder",
+          "kind": "class",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/CommandLine.java",
+          "symbol": "CommandLine.Builder.build",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/CommandLine.java",
+          "symbol": "CommandLine.Builder.get",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/DefaultParser.java",
+          "symbol": "DefaultParser.parse",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/Parser.java",
+          "symbol": "Parser.parse",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0050",
+      "question": "Javadoc: Sentences start with a capital",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "aa8360c4c904b291bea76efa651a0eea7581c35e",
+        "subject": "Javadoc: Sentences start with a capital",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/help/OptionFormatter.java",
+          "symbol": "OptionFormatter",
+          "kind": "class",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/help/OptionFormatter.java",
+          "symbol": "OptionFormatter.Builder",
+          "kind": "class",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0051",
+      "question": "Rename to match String style of naming",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "52cb4debef1ef27b4261688b5bb800c87cd81b6c",
+        "subject": "Rename to match String style of naming",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/help/TextHelpAppendable.java",
+          "symbol": "TextHelpAppendable.makeColumnQueue",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/help/Util.java",
+          "symbol": "Util",
+          "kind": "class",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/help/Util.java",
+          "symbol": "Util.indexOfNonWhitespace",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/help/Util.java",
+          "symbol": "Util.ltrim",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0052",
+      "question": "Better parameter name",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "bf4440d6b58f5fb2b3771e4f72a842a8eb441222",
+        "subject": "Better parameter name",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/HelpFormatter.java",
+          "symbol": "HelpFormatter",
+          "kind": "class",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/HelpFormatter.java",
+          "symbol": "HelpFormatter.renderWrappedTextBlock",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0053",
+      "question": "Remove redundant keyword",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "d6c2e6ba813e155b1b6f217a642ec5988c483a1c",
+        "subject": "Remove redundant keyword",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/Option.java",
+          "symbol": "Option.Builder.optionalArg",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0054",
+      "question": "Replace internal StringBuffer with StringBuilder",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "8d9604d76f510642aaeb8156a43c99c8d70a504a",
+        "subject": "Replace internal StringBuffer with StringBuilder",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/HelpFormatter.java",
+          "symbol": "HelpFormatter",
+          "kind": "class",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/HelpFormatter.java",
+          "symbol": "HelpFormatter.appendOption",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/HelpFormatter.java",
+          "symbol": "HelpFormatter.appendOptionGroup",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/HelpFormatter.java",
+          "symbol": "HelpFormatter.printUsage",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0055",
+      "question": "You can now extend HelpFormatter.Builder",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "198838a546f6b870a82db4a690e906ebdc6bd70c",
+        "subject": "You can now extend HelpFormatter.Builder",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/HelpFormatter.java",
+          "symbol": "HelpFormatter.Builder",
+          "kind": "class",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0056",
+      "question": "Normalize Javadoc @param formatting",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "e30f0050e91581d6c5dd8a0b329109d39dc7bcdc",
+        "subject": "Normalize Javadoc @param formatting",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/OptionBuilder.java",
+          "symbol": "OptionBuilder",
+          "kind": "class",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0057",
+      "question": "Add OptionGroup.isSelected()",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "267bdf7777a0380d1280da0f83f2e5000440c0c5",
+        "subject": "Add OptionGroup.isSelected()",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/DefaultParser.java",
+          "symbol": "DefaultParser.handleProperties",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/OptionGroup.java",
+          "symbol": "OptionGroup",
+          "kind": "class",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/OptionGroup.java",
+          "symbol": "OptionGroup.isSelected",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/Parser.java",
+          "symbol": "Parser.processProperties",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0058",
+      "question": "Add PMD check to default Maven goal",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "3485401b8879dec78e07f5dc88b7b6b762a4225e",
+        "subject": "Add PMD check to default Maven goal",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/CommandLine.java",
+          "symbol": "CommandLine.getOptionValues",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0059",
+      "question": "Avoid throwing NullPointerException when calling CommandLineParser will null array elements",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "21300689546875736fce627970842691da97bd07",
+        "subject": "Avoid throwing NullPointerException when calling CommandLineParser will null array elements",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/DefaultParser.java",
+          "symbol": "DefaultParser.handleToken",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/GnuParser.java",
+          "symbol": "GnuParser.flatten",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/Parser.java",
+          "symbol": "Parser.parse",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/PosixParser.java",
+          "symbol": "PosixParser.flatten",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0060",
+      "question": "Better internal name",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "8f57b20c6bfd922690130ed0a04d674c566b8e85",
+        "subject": "Better internal name",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/DefaultParser.java",
+          "symbol": "DefaultParser",
+          "kind": "class",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/DefaultParser.java",
+          "symbol": "DefaultParser.handleShortAndLongOption",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0061",
+      "question": "[CLI-331] Handle reporting of deprecated options when parameters are not String type.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "c63265ba42aea420d476f9c410a3e651416d89f8",
+        "subject": "[CLI-331] Handle reporting of deprecated options when parameters are not String type. (#270)",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/CommandLine.java",
+          "symbol": "CommandLine.getOptionValues",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/CommandLine.java",
+          "symbol": "CommandLine.getParsedOptionValue",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/CommandLine.java",
+          "symbol": "CommandLine.hasOption",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0062",
+      "question": "Inline single use local variable",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "8556b4c56d43dbaa455cf75f92a601267fcdf5f0",
+        "subject": "Inline single use local variable",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/DefaultParser.java",
+          "symbol": "DefaultParser.getMatchingLongOptions",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0063",
+      "question": "No need for Javadoc since tag in [package-]private methods",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "231412cc31e18e0993a57a089f098c6a3a08baff",
+        "subject": "No need for Javadoc since tag in [package-]private methods",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/HelpFormatter.java",
+          "symbol": "HelpFormatter",
+          "kind": "class",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0064",
+      "question": "Avoid NullPointerException in CommandLine.getOptionValues(Option|String)",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "e6c96bfa3baa411342b4af3c655a4ea4bfff4241",
+        "subject": "Avoid NullPointerException in CommandLine.getOptionValues(Option|String)",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/CommandLine.java",
+          "symbol": "CommandLine",
+          "kind": "class",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/CommandLine.java",
+          "symbol": "CommandLine.get",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/CommandLine.java",
+          "symbol": "CommandLine.getOptionValue",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/CommandLine.java",
+          "symbol": "CommandLine.getOptionValues",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/CommandLine.java",
+          "symbol": "CommandLine.getParsedOptionValue",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0065",
+      "question": "Option.Builder.option(\"\") should throw IllegalArgumentException instead of ArrayIndexOutOfBoundsException",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "0ece5e45c0d5c713f1c3888281f8eb32c252d5db",
+        "subject": "Option.Builder.option(\"\") should throw IllegalArgumentException instead of ArrayIndexOutOfBoundsException",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/OptionValidator.java",
+          "symbol": "OptionValidator",
+          "kind": "class",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/OptionValidator.java",
+          "symbol": "OptionValidator.validate",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0066",
+      "question": "Fail-fase on null input",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "613e86252b1e6add149f6cabec13d2415725d32f",
+        "subject": "Fail-fase on null input",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/TypeHandler.java",
+          "symbol": "TypeHandler",
+          "kind": "class",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/TypeHandler.java",
+          "symbol": "TypeHandler.TypeHandler",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0067",
+      "question": "Make default constructor private",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "9aee5d941a9fe3177e3619870d05c404d1cef4ea",
+        "subject": "Make default constructor private",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/Util.java",
+          "symbol": "Util",
+          "kind": "class",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/Util.java",
+          "symbol": "Util.Util",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0068",
+      "question": "Remove trailing whitespace",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "f91a896d5c9cdc7765e7afd56153f0c8cca49e55",
+        "subject": "Remove trailing whitespace",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/TypeHandler.java",
+          "symbol": "TypeHandler",
+          "kind": "class",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0069",
+      "question": "No need for a fully qualified class name",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "f172b7cbc4d409f49bc884dd22fff48c84e1bf58",
+        "subject": "No need for a fully qualified class name",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/Converter.java",
+          "symbol": "Converter.URL",
+          "kind": "field",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0070",
+      "question": "Format to longer lines",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "d48bcaaf2ad3c7867fbcc8ecd84442f6c9f61325",
+        "subject": "Format to longer lines",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/TypeHandler.java",
+          "symbol": "TypeHandler",
+          "kind": "class",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0071",
+      "question": "Throw IllegalArgumentException instead of RuntimeException",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "867f37822a3eff7418880eb6000f119c85861836",
+        "subject": "Throw IllegalArgumentException instead of RuntimeException",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/TypeHandler.java",
+          "symbol": "TypeHandler",
+          "kind": "class",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/TypeHandler.java",
+          "symbol": "TypeHandler.createDate",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/TypeHandler.java",
+          "symbol": "TypeHandler.createFile",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/TypeHandler.java",
+          "symbol": "TypeHandler.createValueUnchecked",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0072",
+      "question": "Use better Map API (Java 8)",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "7749ededd334c50063e400a032c73e6b012a68c6",
+        "subject": "Use better Map API (Java 8)",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/TypeHandler.java",
+          "symbol": "TypeHandler",
+          "kind": "class",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/TypeHandler.java",
+          "symbol": "TypeHandler.getConverter",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0073",
+      "question": "CLI-326: make option.getKey() public",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "cb334bdf9d9408669996ab01a710b444f0d0c8c6",
+        "subject": "CLI-326: make option.getKey() public (#239)",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/Option.java",
+          "symbol": "Option",
+          "kind": "class",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/Option.java",
+          "symbol": "Option.getKey",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0074",
+      "question": "CLI-320: Awkward behavior of Option.builder() for multiple optional args",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "fbd01940d2e675fb1fd2a5b526f831bd0853ce55",
+        "subject": "CLI-320: Awkward behavior of Option.builder() for multiple optional args (#206)",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/Option.java",
+          "symbol": "Option.Builder.optionalArg",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0075",
+      "question": "Avoid NullPointerException in Util.stripLeadingAndTrailingQuotes(String)",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "ae7147049e8f5ee7a1ecd0ab8b56d5986e55e7a3",
+        "subject": "Avoid NullPointerException in Util.stripLeadingAndTrailingQuotes(String)",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/Util.java",
+          "symbol": "Util",
+          "kind": "class",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/Util.java",
+          "symbol": "Util.isEmpty",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/Util.java",
+          "symbol": "Util.stripLeadingAndTrailingQuotes",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/Util.java",
+          "symbol": "Util.stripLeadingHyphens",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0076",
+      "question": "[CLI-323] Added Supplier<T> defaults for getParsedOptionValue",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "8eb7b8932fbb37a2bd3c06af02c348bc9643f242",
+        "subject": "[CLI-323] Added Supplier<T> defaults for getParsedOptionValue (#229)",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/CommandLine.java",
+          "symbol": "CommandLine",
+          "kind": "class",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/CommandLine.java",
+          "symbol": "CommandLine.getParsedOptionValue",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0077",
+      "question": "CLI-324 Make adding OptionGroups and Options to existing Options easier",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "14a95d9e3a17b28d0030b51aef45464137efc74a",
+        "subject": "CLI-324 Make adding OptionGroups and Options to existing Options easier (#230)",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/Options.java",
+          "symbol": "Options",
+          "kind": "class",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/Options.java",
+          "symbol": "Options.addOptions",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/Options.java",
+          "symbol": "Options.getOptionGroups",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/Options.java",
+          "symbol": "Options.getRequiredOptions",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0078",
+      "question": "[CLI-312] Inconsistent behaviour in key/value pairs (Java property style)",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "ce86213e7e5aa10aa19194c4e172ca146b80c7fa",
+        "subject": "[CLI-312] Inconsistent behaviour in key/value pairs (Java property style) (#233)",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/DefaultParser.java",
+          "symbol": "DefaultParser.checkRequiredArgs",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0079",
+      "question": "Use NIO directly for Converter.PATH",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "6349e710493d868072b01bd1495c56fc0423d30f",
+        "subject": "Use NIO directly for Converter.PATH",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/Converter.java",
+          "symbol": "Converter",
+          "kind": "interface",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/Converter.java",
+          "symbol": "Converter.PATH",
+          "kind": "field",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0080",
+      "question": "Fix Javadoc code tag and replace some code tags with link tags",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "f2768dea7f013e857b3dddc50bd524c5bb1aa0b0",
+        "subject": "Fix Javadoc code tag and replace some code tags with link tags",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/Converter.java",
+          "symbol": "Converter",
+          "kind": "interface",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0081",
+      "question": "Javadoc: No need for java.lang FQCN",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "3ee8efb052ff7e04a54fc5e81f2203485c050d03",
+        "subject": "Javadoc: No need for java.lang FQCN",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/OptionBuilder.java",
+          "symbol": "OptionBuilder",
+          "kind": "class",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0082",
+      "question": "Normalize setter Javadoc",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "fb92585d967e53e87886e0652755ad921b645c32",
+        "subject": "Normalize setter Javadoc",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/HelpFormatter.java",
+          "symbol": "HelpFormatter",
+          "kind": "class",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/OptionGroup.java",
+          "symbol": "OptionGroup",
+          "kind": "class",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0083",
+      "question": "Update call deprecated in Java 9",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "31e87cb10fed5ae7287b4b2d10228fe41d662498",
+        "subject": "Update call deprecated in Java 9",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/TypeHandler.java",
+          "symbol": "TypeHandler.createObject",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0084",
+      "question": "[CLI-317] NullPointerException thrown by CommandLineParser.parse()",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "34278395b6115752774c3d16a00292591da2dde3",
+        "subject": "[CLI-317] NullPointerException thrown by CommandLineParser.parse()",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/Option.java",
+          "symbol": "Option.Builder.optionalArg",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0085",
+      "question": "CLI-313: Fixed StringIndexOutOfBoundsException for Java-like property token",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "379558822e41b749b968a9cd7ca90d371c927e30",
+        "subject": "CLI-313: Fixed StringIndexOutOfBoundsException for Java-like property token",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/DefaultParser.java",
+          "symbol": "DefaultParser.isJavaProperty",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0086",
+      "question": "Better parameter names",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "f0d54de5fceedd46331870f22c57d159e784218b",
+        "subject": "Better parameter names",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/Option.java",
+          "symbol": "Option.Builder",
+          "kind": "class",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/Option.java",
+          "symbol": "Option.Builder.numberOfArgs",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/Option.java",
+          "symbol": "Option.Builder.optionalArg",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/Option.java",
+          "symbol": "Option.Builder.valueSeparator",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0087",
+      "question": "CommandLine.addArgs(String) should not allow a null String",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "08f8c5034a8492be6db65b2086341c292489ee53",
+        "subject": "CommandLine.addArgs(String) should not allow a null String",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/CommandLine.java",
+          "symbol": "CommandLine.addArg",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0088",
+      "question": "CommandLine.addOption(Option) should not allow a null Option",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "834d696d8943aaa80eb213e1f8e67e1d14ac811f",
+        "subject": "CommandLine.addOption(Option) should not allow a null Option",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/CommandLine.java",
+          "symbol": "CommandLine.addOption",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0089",
+      "question": "Fix NPE in CommandLine.resolveOption(String).",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "57c08d0d16e0de5920d7211cf1c888397f71f558",
+        "subject": "Fix NPE in CommandLine.resolveOption(String).",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/CommandLine.java",
+          "symbol": "CommandLine",
+          "kind": "class",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/CommandLine.java",
+          "symbol": "CommandLine.resolveOption",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0090",
+      "question": "Throw a RuntimeException subclass instead of RuntimeException",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "ab9a0f92ff10ad16af0045976f99692beea9081d",
+        "subject": "Throw a RuntimeException subclass instead of RuntimeException",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/Option.java",
+          "symbol": "Option.clone",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0091",
+      "question": "Delete unused assignment.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "61a465a96a4c67012a924ee0467760c02ad6f479",
+        "subject": "Delete unused assignment. (#112)",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/OptionBuilder.java",
+          "symbol": "OptionBuilder.create",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0092",
+      "question": "The maximum can be calculated using a Math.max() instead of doing it manually.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "6647dccc95f8ae3f3b5547b7d2cb2cbef6703e91",
+        "subject": "The maximum can be calculated using a Math.max() instead of doing it manually. (#111)",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/HelpFormatter.java",
+          "symbol": "HelpFormatter.renderOptions",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0093",
+      "question": "Lookup key in map only once",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "14c4903117534e4e4f20947ce227e1fc7af36511",
+        "subject": "Lookup key in map only once",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/Options.java",
+          "symbol": "Options.getOption",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0094",
+      "question": "Javadocs and comments",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "ed0e3dbc0c7213eadb108ddb7668572aec2624d6",
+        "subject": "Javadocs and comments",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/DefaultParser.java",
+          "symbol": "DefaultParser",
+          "kind": "class",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/DefaultParser.java",
+          "symbol": "DefaultParser.Builder",
+          "kind": "class",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0095",
+      "question": "Better use of toArray()",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "9b101bf36c477fb2e802d0860afdc093aef1307f",
+        "subject": "Better use of toArray()",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/CommandLine.java",
+          "symbol": "CommandLine.getArgs",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/CommandLine.java",
+          "symbol": "CommandLine.getOptions",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/Option.java",
+          "symbol": "Option",
+          "kind": "class",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/Option.java",
+          "symbol": "Option.EMPTY_ARRAY",
+          "kind": "field",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0096",
+      "question": "Use EMPTY_STRING_ARRAY constant.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "27b961f2b40a2d2ba695dc50774bed32401201be",
+        "subject": "Use EMPTY_STRING_ARRAY constant. (#102)",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/CommandLine.java",
+          "symbol": "CommandLine.getOptionValues",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/Option.java",
+          "symbol": "Option.getValues",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0097",
+      "question": "Next version is 1.5.0.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "cc37692b8edbb78cdee140d5c487e0bb42ec3e05",
+        "subject": "Next version is 1.5.0.",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/CommandLine.java",
+          "symbol": "CommandLine",
+          "kind": "class",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/DefaultParser.java",
+          "symbol": "DefaultParser",
+          "kind": "class",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/DefaultParser.java",
+          "symbol": "DefaultParser.Builder",
+          "kind": "class",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/Option.java",
+          "symbol": "Option.Builder",
+          "kind": "class",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0098",
+      "question": "Update checkstyle and enforce.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "897593c0f09ba8b87b3dd13dce00b0d5fbdf2c3f",
+        "subject": "Update checkstyle and enforce.",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/GnuParser.java",
+          "symbol": "GnuParser.flatten",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/HelpFormatter.java",
+          "symbol": "HelpFormatter.renderWrappedTextBlock",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/Parser.java",
+          "symbol": "Parser.processProperties",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0099",
+      "question": "[CLI-287] Allow whitespace-only header and footer",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "82403d07579665a0c194a638425ac24e08581ac2",
+        "subject": "[CLI-287] Allow whitespace-only header and footer (#26)",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/HelpFormatter.java",
+          "symbol": "HelpFormatter.printHelp",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0100",
+      "question": "Deduplicate; better param name; close HTML tags in Javadoc.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "8dcf11911ab73ddb5455853a31149a00549261b5",
+        "subject": "Deduplicate; better param name; close HTML tags in Javadoc.",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/Option.java",
+          "symbol": "Option",
+          "kind": "class",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/Option.java",
+          "symbol": "Option.Builder",
+          "kind": "class",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/Option.java",
+          "symbol": "Option.Builder.Builder",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/Option.java",
+          "symbol": "Option.builder",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0101",
+      "question": "Added setter for Builder.option #33.",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "591af95e0a51d067f69f0ddf1a0ac54ef5c04842",
+        "subject": "Added setter for Builder.option #33.",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/Option.java",
+          "symbol": "Option.Builder",
+          "kind": "class",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/Option.java",
+          "symbol": "Option.Builder.option",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0102",
+      "question": "Use final and {} notation for array declarations.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "f45c4301de8bbcb50227e0663f20c5f0870636d3",
+        "subject": "Use final and {} notation for array declarations.",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/Option.java",
+          "symbol": "Option.equals",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0103",
+      "question": "Use Javadoc tags instead of HTML.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "9aae655438b46e33213f50e27997be667ec9ff38",
+        "subject": "Use Javadoc tags instead of HTML.",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/DefaultParser.java",
+          "symbol": "DefaultParser",
+          "kind": "class",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/DefaultParser.java",
+          "symbol": "DefaultParser.Builder",
+          "kind": "class",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0104",
+      "question": "Re-implement equals/hashCode with java.lang.Objects.",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "cf94289a3ee4c8ac9d9e958f2e8bbc06efd24d48",
+        "subject": "Re-implement equals/hashCode with java.lang.Objects.",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/Option.java",
+          "symbol": "Option.equals",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/Option.java",
+          "symbol": "Option.hashCode",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0105",
+      "question": "Rename some internals.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "f2aa3089560eb00cc973b0cb12ead7c3424536bb",
+        "subject": "Rename some internals.",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/Option.java",
+          "symbol": "Option",
+          "kind": "class",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/Option.java",
+          "symbol": "Option.Builder.Builder",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/Option.java",
+          "symbol": "Option.Option",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/OptionValidator.java",
+          "symbol": "OptionValidator",
+          "kind": "class",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/OptionValidator.java",
+          "symbol": "OptionValidator.validate",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0106",
+      "question": "Simplify array initialization.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "caf0b99cfa99392e48e85aa103c815e4e9debfac",
+        "subject": "Simplify array initialization.",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/Util.java",
+          "symbol": "Util.EMPTY_STRING_ARRAY",
+          "kind": "field",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0107",
+      "question": "Javadoc: Sentences start with a capitalize letter.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "d63b4bd3e61e83b6dbe7b3d6f81a06967f17e784",
+        "subject": "Javadoc: Sentences start with a capitalize letter.",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/HelpFormatter.java",
+          "symbol": "HelpFormatter",
+          "kind": "class",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0108",
+      "question": "Remove useless parens.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "7b32c729873802df59b82a8ef7d6db27ceccf221",
+        "subject": "Remove useless parens.",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/CommandLine.java",
+          "symbol": "CommandLine.getOptionValue",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/Option.java",
+          "symbol": "Option.getValue",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0109",
+      "question": "Use try-with-resources.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "3d83402d6fa39224ab6650f6a011322e7ac4ab5a",
+        "subject": "Use try-with-resources.",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/Option.java",
+          "symbol": "Option",
+          "kind": "class",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0110",
+      "question": "Fix compiler warnings.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "b805e90dd082b4549ef4d565d13c6db8fdb96a5e",
+        "subject": "Fix compiler warnings.",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/DefaultParser.java",
+          "symbol": "DefaultParser.parse",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/Parser.java",
+          "symbol": "Parser.setOptions",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0111",
+      "question": "Fix NPE in DefaultParser.isLongOption(String) seen in the wild.",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "81cf67387da844052aaa4c6feb4c8b290308e0eb",
+        "subject": "Fix NPE in DefaultParser.isLongOption(String) seen in the wild.",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/DefaultParser.java",
+          "symbol": "DefaultParser.isLongOption",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/DefaultParser.java",
+          "symbol": "DefaultParser.isShortOption",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0112",
+      "question": "No need to nest in else.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "98d06d37bc7058bbfb2704c9620669c66e279f4a",
+        "subject": "No need to nest in else.",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/DefaultParser.java",
+          "symbol": "DefaultParser.handleConcatenatedOptions",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/DefaultParser.java",
+          "symbol": "DefaultParser.isLongOption",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/OptionGroup.java",
+          "symbol": "OptionGroup.setSelected",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/TypeHandler.java",
+          "symbol": "TypeHandler.createValue",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/Util.java",
+          "symbol": "Util.stripLeadingHyphens",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0113",
+      "question": "Remove use of redundant String.substring() parameter.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "5f0dc627e3beeafbe5d528cdd76c7ef21308b726",
+        "subject": "Remove use of redundant String.substring() parameter.",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/Util.java",
+          "symbol": "Util.stripLeadingHyphens",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0114",
+      "question": "Normalize to US English spelling.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "66cc7b4cb8b0f39edfe0ee37eead4ace04a7be4e",
+        "subject": "Normalize to US English spelling.",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/CommandLine.java",
+          "symbol": "CommandLine.getOptions",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/HelpFormatter.java",
+          "symbol": "HelpFormatter.printUsage",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/Parser.java",
+          "symbol": "Parser.parse",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0115",
+      "question": "Add missing @Deprecated and @Override.",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "a3e2d6b14257122a891d84459f927e2417cc8c88",
+        "subject": "Add missing @Deprecated and @Override.",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/CommandLine.java",
+          "symbol": "CommandLine",
+          "kind": "class",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/DefaultParser.java",
+          "symbol": "DefaultParser",
+          "kind": "class",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/HelpFormatter.java",
+          "symbol": "HelpFormatter.OptionComparator",
+          "kind": "class",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/Parser.java",
+          "symbol": "Parser",
+          "kind": "class",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0116",
+      "question": "[CLI-282] TypeHandler should throw ParseException for an unsupported class.",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "b0024d482050a08efc36c3cabee37c0af0e57a10",
+        "subject": "[CLI-282] TypeHandler should throw ParseException for an unsupported class.",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/TypeHandler.java",
+          "symbol": "TypeHandler.createValue",
+          "kind": "method",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0117",
+      "question": "adding period to javadocs",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "04697739edb6b60ecdbcccbfeb4e787728674942",
+        "subject": "adding period to javadocs",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/CommandLine.java",
+          "symbol": "CommandLine",
+          "kind": "class",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/main/java/org/apache/commons/cli/CommandLine.java",
+          "symbol": "CommandLine.Builder",
+          "kind": "class",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0118",
+      "question": "Tweak Javadoc spelling",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "19849509da2a483ba0a8543606a3b570b7ec5c68",
+        "subject": "Tweak Javadoc spelling",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/Options.java",
+          "symbol": "Options",
+          "kind": "class",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "java__commons-cli__0119",
+      "question": "CLI-217: More DefaultParser constructor docs.",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "23d13f5c3d7fcf810662c31d147c470e4263fe55",
+        "subject": "CLI-217: More DefaultParser constructor docs.",
+        "upstream": "https://github.com/apache/commons-cli.git"
+      },
+      "gold": [
+        {
+          "file": "src/main/java/org/apache/commons/cli/DefaultParser.java",
+          "symbol": "DefaultParser",
+          "kind": "class",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    }
+  ]
+}

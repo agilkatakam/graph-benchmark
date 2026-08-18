@@ -1,0 +1,8 @@
+.DS_Store
+__pycache__/
+*.pyc
+.venv*/
+node_modules/
+
+# Graphify writes a query cache next to a graph at run time; it is not part of the baseline.
+retrieval-benchmark/baselines/*/cache/

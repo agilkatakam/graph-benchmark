@@ -1,0 +1,1037 @@
+{
+  "language": "python",
+  "repo": "requests",
+  "pinned_sha": "8068356288978c4f54661ae6f95afe0e0831885e",
+  "upstream": "https://github.com/psf/requests.git",
+  "locator": {
+    "tool": "universal-ctags",
+    "version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team",
+    "args": "--fields=+neKzS --extras=+q --output-format=json"
+  },
+  "filters": {
+    "target": 120,
+    "scan_depth": 6000,
+    "min_subject_chars": 20,
+    "max_gold_decls": 5,
+    "no_merges": true,
+    "non_source_pattern": "(^|/)(test|tests|spec|specs|__tests__|testdata|fixtures|examples?|samples?|docs?|doc|website|benchmarks?|vendor|third_party|node_modules)(/|$)|(^|/)[^/]*[._-](test|spec)s?\\.[^/]+$|(^|/)test_[^/]+$",
+    "noise_subject_pattern": "^\\s*(merge\\b|revert\\b|bump\\b|release\\b|version\\b|prepare\\b|\\[maven-release-plugin\\]|update (changelog|copyright|license|readme|deps|dependencies)\\b|chore\\(deps\\)|build\\(deps\\))",
+    "process_subject_pattern": "^\\s*(apply|address|incorporate|implement)\\s+(review|reviewer|pr|code[- ]review|feedback|comments?|suggestions?)\\b|^\\s*(review\\s+)?(comments?|feedback|suggestions?)\\s*$|^\\s*(fix(ed|es)?\\s+)?typos?\\b|^\\s*(code\\s+)?(cleanup|clean\\s*up|formatting|reformat|gofmt|rustfmt|lint(ing)?|style)\\b|^\\s*(minor|small|misc(ellaneous)?|various)\\s+(fix(es)?|change(s)?|update(s)?|cleanup)\\b|^\\s*(wip|nit|nits|rebase|squash|amend)\\b|^\\s*(add|update)\\s+(comments?|javadoc|docstring|documentation)\\s*$"
+  },
+  "selection_stats": {
+    "scanned": 4878,
+    "noise_subject": 348,
+    "process_subject": 106,
+    "short_subject": 1592,
+    "dup_subject": 1,
+    "no_source_files": 1238,
+    "no_gold": 238,
+    "too_many_gold": 151,
+    "not_at_pin": 1163,
+    "kept": 41
+  },
+  "questions": [
+    {
+      "id": "python__requests__0000",
+      "question": "Add hasattr checks for remaining protocol isinstance checks",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "6f66281a1d6326b1b9c4ac09ca30de0fc4e6ef43",
+        "subject": "Add hasattr checks for remaining protocol isinstance checks (#7505)",
+        "upstream": "https://github.com/psf/requests.git"
+      },
+      "gold": [
+        {
+          "file": "src/requests/_types.py",
+          "symbol": "has_read",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/requests/models.py",
+          "symbol": "PreparedRequest.prepare_body",
+          "kind": "member",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/requests/models.py",
+          "symbol": "RequestEncodingMixin._encode_files",
+          "kind": "member",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/requests/models.py",
+          "symbol": "RequestEncodingMixin._encode_params",
+          "kind": "member",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/requests/models.py",
+          "symbol": "_t",
+          "kind": "unknown",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "python__requests__0001",
+      "question": "Fix `_encode_files` detection for `__getattr__`-based file wrappers",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "6f205ff422bccd5e4c4fc0b64c5f3e7df5181db6",
+        "subject": "Fix `_encode_files` detection for `__getattr__`-based file wrappers (#7502)",
+        "upstream": "https://github.com/psf/requests.git"
+      },
+      "gold": [
+        {
+          "file": "src/requests/models.py",
+          "symbol": "RequestEncodingMixin._encode_files",
+          "kind": "member",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "python__requests__0002",
+      "question": "Add type annotation for `Request.hooks`",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "1190afd14fca74292946d62c4c8169880a47ff67",
+        "subject": "Add type annotation for `Request.hooks` (#7498)",
+        "upstream": "https://github.com/psf/requests.git"
+      },
+      "gold": [
+        {
+          "file": "src/requests/models.py",
+          "symbol": "Request",
+          "kind": "class",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "python__requests__0003",
+      "question": "indent continuation line in Session.get :param params:",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "cd90742ed94d901759e26766197d0ce7c7bd9c8e",
+        "subject": "docs: indent continuation line in Session.get :param params: (#7460)",
+        "upstream": "https://github.com/psf/requests.git"
+      },
+      "gold": [
+        {
+          "file": "src/requests/sessions.py",
+          "symbol": "Session.get",
+          "kind": "member",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "python__requests__0004",
+      "question": "Move Request.headers back to Mapping",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "84d10f0be83e8f6aeca8a05230c52216431c4d0b",
+        "subject": "Move Request.headers back to Mapping (#7441)",
+        "upstream": "https://github.com/psf/requests.git"
+      },
+      "gold": [
+        {
+          "file": "src/requests/_types.py",
+          "symbol": "HeadersType",
+          "kind": "variable",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/requests/models.py",
+          "symbol": "Request",
+          "kind": "class",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "python__requests__0005",
+      "question": "Fix mutability issues with headers input types",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "e511bc72777a94c45d004e010c597925092e1efe",
+        "subject": "Fix mutability issues with headers input types (#7431)",
+        "upstream": "https://github.com/psf/requests.git"
+      },
+      "gold": [
+        {
+          "file": "src/requests/_types.py",
+          "symbol": "BaseRequestKwargs",
+          "kind": "class",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/requests/_types.py",
+          "symbol": "HeadersType",
+          "kind": "variable",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/requests/models.py",
+          "symbol": "Request",
+          "kind": "class",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/requests/models.py",
+          "symbol": "Request.__init__",
+          "kind": "member",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/requests/sessions.py",
+          "symbol": "Session.request",
+          "kind": "member",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "python__requests__0006",
+      "question": "Constrain Response.reason to str",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "2144213c307691710c9d665700860fc4993c3035",
+        "subject": "Constrain Response.reason to str (#7437)",
+        "upstream": "https://github.com/psf/requests.git"
+      },
+      "gold": [
+        {
+          "file": "src/requests/models.py",
+          "symbol": "Response",
+          "kind": "class",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/requests/models.py",
+          "symbol": "Response.__init__",
+          "kind": "member",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "python__requests__0007",
+      "question": "Fix `prepare_body` stream detection for `__getattr__`-based file wrappers",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "6404f345e562d962abe6700a1c357ec1e7e18232",
+        "subject": "Fix `prepare_body` stream detection for `__getattr__`-based file wrappers (#7433)",
+        "upstream": "https://github.com/psf/requests.git"
+      },
+      "gold": [
+        {
+          "file": "src/requests/models.py",
+          "symbol": "PreparedRequest.prepare_body",
+          "kind": "member",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "python__requests__0008",
+      "question": "Align Session.get parameters with requests.get",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "86b378d3f60f828daa13ca50aa82e287ff7b66b4",
+        "subject": "Align Session.get parameters with requests.get (#7429)",
+        "upstream": "https://github.com/psf/requests.git"
+      },
+      "gold": [
+        {
+          "file": "src/requests/sessions.py",
+          "symbol": "Session.get",
+          "kind": "member",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "python__requests__0009",
+      "question": "Port bpo-39057 to Requests",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "a4f9a5999bdb9bf2d6e7c8aa973b28cacb17134f",
+        "subject": "Port bpo-39057 to Requests (#7427)",
+        "upstream": "https://github.com/psf/requests.git"
+      },
+      "gold": [
+        {
+          "file": "src/requests/utils.py",
+          "symbol": "should_bypass_proxies",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "python__requests__0010",
+      "question": "sessions: fix hooks type",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "b684dcb9bbf3aa557d1238e72062c4a29737dd1c",
+        "subject": "sessions: fix hooks type (#7425)",
+        "upstream": "https://github.com/psf/requests.git"
+      },
+      "gold": [
+        {
+          "file": "src/requests/_types.py",
+          "symbol": "BaseRequestKwargs",
+          "kind": "class",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/requests/sessions.py",
+          "symbol": "Session.request",
+          "kind": "member",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "python__requests__0011",
+      "question": "Consider urllib3 version has 3 numbers at most",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "b294b08fe3b08df9f646f64d1250f96193dab066",
+        "subject": "Consider urllib3 version has 3 numbers at most (#7375) (#7376)",
+        "upstream": "https://github.com/psf/requests.git"
+      },
+      "gold": [
+        {
+          "file": "src/requests/__init__.py",
+          "symbol": "check_compatibility",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "python__requests__0012",
+      "question": "Clarify decode_unicode behaviour in iter_{content,lines} docstrings",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "d2f6bdecc835475c3cfbb83565ea879d7b2712ca",
+        "subject": "Clarify decode_unicode behaviour in iter_{content,lines} docstrings (#7365)",
+        "upstream": "https://github.com/psf/requests.git"
+      },
+      "gold": [
+        {
+          "file": "src/requests/models.py",
+          "symbol": "Response.iter_content",
+          "kind": "member",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/requests/models.py",
+          "symbol": "Response.iter_lines",
+          "kind": "member",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "python__requests__0013",
+      "question": "Move DigestAuth hash algorithms to use usedforsecurity=False",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "a044b020dea43230585126901684a0f30ec635a8",
+        "subject": "Move DigestAuth hash algorithms to use usedforsecurity=False (#7310)",
+        "upstream": "https://github.com/psf/requests.git"
+      },
+      "gold": [
+        {
+          "file": "src/requests/auth.py",
+          "symbol": "HTTPDigestAuth.build_digest_header",
+          "kind": "member",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/requests/auth.py",
+          "symbol": "HTTPDigestAuth.build_digest_header.md5_utf8",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/requests/auth.py",
+          "symbol": "HTTPDigestAuth.build_digest_header.sha256_utf8",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/requests/auth.py",
+          "symbol": "HTTPDigestAuth.build_digest_header.sha512_utf8",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/requests/auth.py",
+          "symbol": "HTTPDigestAuth.build_digest_header.sha_utf8",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "python__requests__0014",
+      "question": "Prevent Response self-reference in redirect history",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "ef439eb779c1eba7cbdeeeb302b11e1e061b4b7d",
+        "subject": "Prevent Response self-reference in redirect history (#7328)",
+        "upstream": "https://github.com/psf/requests.git"
+      },
+      "gold": [
+        {
+          "file": "src/requests/sessions.py",
+          "symbol": "SessionRedirectMixin.resolve_redirects",
+          "kind": "member",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "python__requests__0015",
+      "question": "Fix malformed value parsing for Content-Type",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "f0198e6dfc431a2293dc16e1b1e8fcddc910a7f3",
+        "subject": "Fix malformed value parsing for Content-Type (#7309)",
+        "upstream": "https://github.com/psf/requests.git"
+      },
+      "gold": [
+        {
+          "file": "src/requests/utils.py",
+          "symbol": "_parse_content_type_header",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "python__requests__0016",
+      "question": "Fix cosmetic header validity parsing regex",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "bc7dd0fc4d56e808bcdd85ac2d797b3107c89259",
+        "subject": "Fix cosmetic header validity parsing regex (#7308)",
+        "upstream": "https://github.com/psf/requests.git"
+      },
+      "gold": [
+        {
+          "file": "src/requests/_internal_utils.py",
+          "symbol": "_VALID_HEADER_NAME_RE_BYTE",
+          "kind": "variable",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/requests/_internal_utils.py",
+          "symbol": "_VALID_HEADER_NAME_RE_STR",
+          "kind": "variable",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/requests/_internal_utils.py",
+          "symbol": "_VALID_HEADER_VALUE_RE_BYTE",
+          "kind": "variable",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/requests/_internal_utils.py",
+          "symbol": "_VALID_HEADER_VALUE_RE_STR",
+          "kind": "variable",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "python__requests__0017",
+      "question": "Remove unused extraction call",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "e331a288f369973f5de0ec8901c94cae4fa87286",
+        "subject": "Remove unused extraction call (#7292)",
+        "upstream": "https://github.com/psf/requests.git"
+      },
+      "gold": [
+        {
+          "file": "src/requests/adapters.py",
+          "symbol": "HTTPAdapter.cert_verify",
+          "kind": "member",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "python__requests__0018",
+      "question": "Increase chardet upper limit to 8",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "b2a1d33f571518ca9a6148e7da787cc5827f897a",
+        "subject": "Increase chardet upper limit to 8",
+        "upstream": "https://github.com/psf/requests.git"
+      },
+      "gold": [
+        {
+          "file": "src/requests/__init__.py",
+          "symbol": "check_compatibility",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "python__requests__0019",
+      "question": "Increase chardet upper limit to 7",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "4bd79e397304d46dfccd76f36c07f66c0295ff82",
+        "subject": "Increase chardet upper limit to 7",
+        "upstream": "https://github.com/psf/requests.git"
+      },
+      "gold": [
+        {
+          "file": "src/requests/__init__.py",
+          "symbol": "check_compatibility",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "python__requests__0020",
+      "question": "Update docstring for Session.verify to include string support",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "5f338446f9eabd956e7e132668f330d9de4fc368",
+        "subject": "Update docstring for Session.verify to include string support (#6859) (#6865)",
+        "upstream": "https://github.com/psf/requests.git"
+      },
+      "gold": [
+        {
+          "file": "src/requests/sessions.py",
+          "symbol": "Session.__init__",
+          "kind": "member",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "python__requests__0021",
+      "question": "Fix empty netrc entry usage",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "47914226c2968802f2cdee3f6f0f6e06e4472f64",
+        "subject": "Fix empty netrc entry usage (#7205)",
+        "upstream": "https://github.com/psf/requests.git"
+      },
+      "gold": [
+        {
+          "file": "src/requests/utils.py",
+          "symbol": "get_netrc_auth",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "python__requests__0022",
+      "question": "clarify timeout parameter uses seconds in Session.request",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "d58d8aa2f45c3575268d6d5250745ef69f9cf8b7",
+        "subject": "docs: clarify timeout parameter uses seconds in Session.request (#6994)",
+        "upstream": "https://github.com/psf/requests.git"
+      },
+      "gold": [
+        {
+          "file": "src/requests/sessions.py",
+          "symbol": "Session.request",
+          "kind": "member",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "python__requests__0023",
+      "question": "Add more tests to prevent regression of CVE 2024 47081",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "5b4b64c3467fd7a3c03f91ee641aaa348b6bed3b",
+        "subject": "Add more tests to prevent regression of CVE 2024 47081",
+        "upstream": "https://github.com/psf/requests.git"
+      },
+      "gold": [
+        {
+          "file": "src/requests/utils.py",
+          "symbol": "get_netrc_auth",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "python__requests__0024",
+      "question": "Only use hostname to do netrc lookup instead of netloc",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "96ba401c1296ab1dda74a2365ef36d88f7d144ef",
+        "subject": "Only use hostname to do netrc lookup instead of netloc",
+        "upstream": "https://github.com/psf/requests.git"
+      },
+      "gold": [
+        {
+          "file": "src/requests/utils.py",
+          "symbol": "get_netrc_auth",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "python__requests__0025",
+      "question": "Update src/requests/models.py",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "5d31ddbf7b3f512dd3c61952d2c16e980a2b7dc1",
+        "subject": "Update src/requests/models.py",
+        "upstream": "https://github.com/psf/requests.git"
+      },
+      "gold": [
+        {
+          "file": "src/requests/models.py",
+          "symbol": "Response.json",
+          "kind": "member",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "python__requests__0026",
+      "question": "Invert major version check",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "01353d3b4afe3afa838f8f5c08e5f30a5b50cb05",
+        "subject": "Invert major version check",
+        "upstream": "https://github.com/psf/requests.git"
+      },
+      "gold": [
+        {
+          "file": "src/requests/compat.py",
+          "symbol": "is_urllib3_1",
+          "kind": "variable",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/requests/utils.py",
+          "symbol": "super_len",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "python__requests__0027",
+      "question": "Don't use default SSLContext with custom poolmanager kwargs",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "b1d73ddb509a3a2d3e10744e85f9cdebdbde90f0",
+        "subject": "Don't use default SSLContext with custom poolmanager kwargs",
+        "upstream": "https://github.com/psf/requests.git"
+      },
+      "gold": [
+        {
+          "file": "src/requests/adapters.py",
+          "symbol": "HTTPAdapter.build_connection_pool_key_attributes",
+          "kind": "member",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/requests/adapters.py",
+          "symbol": "_urllib3_request_context",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "python__requests__0028",
+      "question": "Allow for overriding of specific pool key params",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "a62a2d35d918baa8e793f7aa4fb41527644dfca5",
+        "subject": "Allow for overriding of specific pool key params",
+        "upstream": "https://github.com/psf/requests.git"
+      },
+      "gold": [
+        {
+          "file": "src/requests/adapters.py",
+          "symbol": "HTTPAdapter",
+          "kind": "class",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/requests/adapters.py",
+          "symbol": "HTTPAdapter.build_connection_pool_key_attributes",
+          "kind": "member",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/requests/adapters.py",
+          "symbol": "HTTPAdapter.get_connection_with_tls_context",
+          "kind": "member",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "python__requests__0029",
+      "question": "Add deprecation warning",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "92075b330a30b9883f466a43d3f7566ab849f91b",
+        "subject": "Add deprecation warning",
+        "upstream": "https://github.com/psf/requests.git"
+      },
+      "gold": [
+        {
+          "file": "src/requests/adapters.py",
+          "symbol": "HTTPAdapter.get_connection",
+          "kind": "member",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "python__requests__0030",
+      "question": "Move _get_connection to get_connection_with_tls_context",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "aa1461b68aa73e2f6ec0e78c8853b635c76fd099",
+        "subject": "Move _get_connection to get_connection_with_tls_context",
+        "upstream": "https://github.com/psf/requests.git"
+      },
+      "gold": [
+        {
+          "file": "src/requests/adapters.py",
+          "symbol": "HTTPAdapter.get_connection",
+          "kind": "member",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/requests/adapters.py",
+          "symbol": "HTTPAdapter.get_connection_with_tls_context",
+          "kind": "member",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/requests/adapters.py",
+          "symbol": "HTTPAdapter.send",
+          "kind": "member",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "python__requests__0031",
+      "question": "Additional should_bypass_proxies function test cases",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "13d892bdbe9a2aa374959a166e8067c35253705d",
+        "subject": "Additional should_bypass_proxies function test cases",
+        "upstream": "https://github.com/psf/requests.git"
+      },
+      "gold": [
+        {
+          "file": "src/requests/utils.py",
+          "symbol": "proxy_bypass_registry",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "python__requests__0032",
+      "question": "Fix the proxy_bypass_registry function all returning true in some cases.",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "1604e20fc87ce212cf3a02474a6d7509b640cbbb",
+        "subject": "Fix the proxy_bypass_registry function all returning true in some cases.",
+        "upstream": "https://github.com/psf/requests.git"
+      },
+      "gold": [
+        {
+          "file": "src/requests/utils.py",
+          "symbol": "proxy_bypass_registry",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "python__requests__0033",
+      "question": "Trim excess leading path separators",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "60389df6d69ce833164696dcf36cbb43336d3426",
+        "subject": "Trim excess leading path separators",
+        "upstream": "https://github.com/psf/requests.git"
+      },
+      "gold": [
+        {
+          "file": "src/requests/adapters.py",
+          "symbol": "HTTPAdapter.request_url",
+          "kind": "member",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "python__requests__0034",
+      "question": "Fix #6628 - JSONDecodeError are not deserializable",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "3ff3ff21dd45957c9e143cd500291959bb15f690",
+        "subject": "Fix #6628 - JSONDecodeError are not deserializable",
+        "upstream": "https://github.com/psf/requests.git"
+      },
+      "gold": [
+        {
+          "file": "src/requests/exceptions.py",
+          "symbol": "JSONDecodeError.__reduce__",
+          "kind": "member",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "python__requests__0035",
+      "question": "Enhance `super_len` to count encoded bytes for str",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "3fd309a5c14e4cfbd96bea6c8e71b4958fe090bb",
+        "subject": "Enhance `super_len` to count encoded bytes for str",
+        "upstream": "https://github.com/psf/requests.git"
+      },
+      "gold": [
+        {
+          "file": "src/requests/utils.py",
+          "symbol": "super_len",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "python__requests__0036",
+      "question": "fix docstring typo: a -> as",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "15849947ec4b8b7c3c136a47e950499edfd36921",
+        "subject": "fix docstring typo: a -> as",
+        "upstream": "https://github.com/psf/requests.git"
+      },
+      "gold": [
+        {
+          "file": "src/requests/utils.py",
+          "symbol": "resolve_proxies",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "python__requests__0037",
+      "question": "Fix missing space in error message",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "c32b046243dcbf0dceb952da1317261109ac45c4",
+        "subject": "Fix missing space in error message",
+        "upstream": "https://github.com/psf/requests.git"
+      },
+      "gold": [
+        {
+          "file": "src/requests/utils.py",
+          "symbol": "_validate_header_part",
+          "kind": "function",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "python__requests__0038",
+      "question": "Update src/requests/packages.py",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "d7490c9d2dc967f68c6ca38b73aa099bc888a04e",
+        "subject": "Update src/requests/packages.py",
+        "upstream": "https://github.com/psf/requests.git"
+      },
+      "gold": [
+        {
+          "file": "src/requests/packages.py",
+          "symbol": "imported_mod",
+          "kind": "variable",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        },
+        {
+          "file": "src/requests/packages.py",
+          "symbol": "mod",
+          "kind": "variable",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "python__requests__0039",
+      "question": "added handling for chardet and charset_normalizer imports",
+      "leaks_symbol": false,
+      "source": {
+        "kind": "commit",
+        "sha": "e9b1217cff710307e5de9fb8ce2fc21eb79acec3",
+        "subject": "added handling for chardet and charset_normalizer imports",
+        "upstream": "https://github.com/psf/requests.git"
+      },
+      "gold": [
+        {
+          "file": "src/requests/packages.py",
+          "symbol": "target",
+          "kind": "variable",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    },
+    {
+      "id": "python__requests__0040",
+      "question": "Update models.Response.json docstring clearer",
+      "leaks_symbol": true,
+      "source": {
+        "kind": "commit",
+        "sha": "12862617df7391a87f30d5bc30fffbcfd8fa3761",
+        "subject": "Update models.Response.json docstring clearer",
+        "upstream": "https://github.com/psf/requests.git"
+      },
+      "gold": [
+        {
+          "file": "src/requests/models.py",
+          "symbol": "Response.json",
+          "kind": "member",
+          "locator": "universal-ctags",
+          "locator_version": "Universal Ctags 6.2.1, Copyright (C) 2015-2025 Universal Ctags Team"
+        }
+      ]
+    }
+  ]
+}
